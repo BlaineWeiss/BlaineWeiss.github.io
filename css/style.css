@@ -7,33 +7,18 @@
 
 /* Colour variables for light mode */
 :root {
-  --bg-colour: #ffffff;
-  --text-colour: #222222;
-  --accent-colour: #007acc;
-  --header-bg: rgba(255, 255, 255, 0.9);
-  --nav-link-colour: #222222;
-  --nav-link-hover: var(--accent-colour);
-  --footer-bg: #f7f7f7;
-  --button-bg: var(--accent-colour);
-  --button-text: #ffffff;
-  --section-bg: #f9f9f9;
+  --bg-colour:#ffffff; --text-colour:#222; --accent-colour:#007acc;
+  --header-bg:rgba(255,255,255,.9); --nav-link-colour:#222; --nav-link-hover:#007acc;
+  --footer-bg:#f7f7f7; --button-bg:var(--accent-colour); --button-text:#fff;
+  --section-bg:#f9f9f9;
 }
 
-/* Dark mode overrides
-   Apply these variables when the <html> element has the `dark` class. We use
-   :root.dark instead of body.dark so that the theme can be applied
-   immediately in the head before the body has parsed. */
+/* Dark overrides */
 :root.dark {
-  --bg-colour: #0e1a24;
-  --text-colour: #e5e5e5;
-  --accent-colour: #67b7ff;
-  --header-bg: rgba(14, 26, 36, 0.9);
-  --nav-link-colour: #e5e5e5;
-  --nav-link-hover: #ffffff;
-  --footer-bg: #0e1a24;
-  --button-bg: var(--accent-colour);
-  --button-text: #0e1a24;
-  --section-bg: #13233a;
+  --bg-colour:#0e1a24; --text-colour:#e5e5e5; --accent-colour:#67b7ff;
+  --header-bg:rgba(14,26,36,.9); --nav-link-colour:#e5e5e5; --nav-link-hover:#fff;
+  --footer-bg:#0e1a24; --button-bg:var(--accent-colour); --button-text:#0e1a24;
+  --section-bg:#13233a;
 }
 
 /* Base styles */
