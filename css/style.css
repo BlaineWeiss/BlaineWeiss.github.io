@@ -1,0 +1,272 @@
+/*
+  Basic styles for the research portal.  This file defines a light and dark
+  colour scheme using CSS variables.  The dark mode is activated by adding
+  the `dark` class to the <body> element.  Typography and layout follow
+  minimalistic design principles and responsive adjustments.
+*/
+
+/* Colour variables for light mode */
+:root {
+  --bg-colour: #ffffff;
+  --text-colour: #222222;
+  --accent-colour: #007acc;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --nav-link-colour: #222222;
+  --nav-link-hover: var(--accent-colour);
+  --footer-bg: #f7f7f7;
+  --button-bg: var(--accent-colour);
+  --button-text: #ffffff;
+  --section-bg: #f9f9f9;
+}
+
+/* Dark mode overrides
+   Apply these variables when the <html> element has the `dark` class. We use
+   :root.dark instead of body.dark so that the theme can be applied
+   immediately in the head before the body has parsed. */
+:root.dark {
+  --bg-colour: #0e1a24;
+  --text-colour: #e5e5e5;
+  --accent-colour: #67b7ff;
+  --header-bg: rgba(14, 26, 36, 0.9);
+  --nav-link-colour: #e5e5e5;
+  --nav-link-hover: #ffffff;
+  --footer-bg: #0e1a24;
+  --button-bg: var(--accent-colour);
+  --button-text: #0e1a24;
+  --section-bg: #13233a;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--accent-colour);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--nav-link-hover);
+}
+
+/* Container utility */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+.logo a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--nav-link-colour);
+}
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+.site-nav a {
+  color: var(--nav-link-colour);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.site-nav a:hover {
+  color: var(--nav-link-hover);
+}
+.mode-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--nav-link-colour);
+  padding: 0.25rem;
+  line-height: 1;
+}
+.mode-toggle:hover {
+  color: var(--nav-link-hover);
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 1rem;
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0));
+}
+.hero-content {
+  flex: 1 1 350px;
+  max-width: 480px;
+}
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+.cta-btn:hover {
+  background-color: var(--nav-link-hover);
+}
+/* 3D placeholder container */
+.hero-3d {
+  flex: 1 1 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  perspective: 800px;
+}
+
+/* CSS‑based rotating cube */
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate-cube 10s infinite linear;
+}
+.cube .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, var(--accent-colour), var(--accent-colour));
+  opacity: 0.9;
+}
+/* Position each face of the cube */
+.cube .front  { transform: translateZ(100px); }
+.cube .back   { transform: rotateY(180deg) translateZ(100px); }
+.cube .right  { transform: rotateY(90deg) translateZ(100px); }
+.cube .left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube .top    { transform: rotateX(90deg) translateZ(100px); }
+.cube .bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate-cube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* Updates section */
+.updates {
+  background-color: var(--section-bg);
+  padding: 2rem 0;
+}
+.updates h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.updates p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--footer-bg);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--nav-link-colour);
+  margin-top: 2rem;
+}
+
+/* GIF gallery styles */
+.gif-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  scroll-behavior: smooth;
+}
+.gif-gallery img {
+  max-width: 250px;
+  height: auto;
+  border-radius: 6px;
+  flex: 0 0 auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.gif-gallery-section h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Publications list styles */
+.publications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.pub-item h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  color: var(--accent-colour);
+}
+.pub-item .pub-authors {
+  margin: 0;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+.pub-item .pub-venue {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: var(--text-colour);
+}
+.pub-item a {
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .hero-3d {
+    margin-top: 0;
+  }
+  #three-canvas {
+    height: 350px;
+  }
+}

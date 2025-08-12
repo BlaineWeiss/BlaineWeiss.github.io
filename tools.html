@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tools – Blaine Weiss</title>
+    <!-- Apply saved colour scheme before CSS loads to prevent flash -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var useDark = stored ? stored === 'dark' : prefersDark;
+          if (useDark) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          /* ignore */
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo"><a href="index.html">Blaine Weiss</a></h1>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="publications.html">Publications &amp; CV</a></li>
+            <li><a href="tools.html" class="active">Tools</a></li>
+          </ul>
+        </nav>
+        <button id="mode-toggle" class="mode-toggle" aria-label="Toggle dark/light mode">
+          🌙
+        </button>
+      </div>
+    </header>
+    <main class="container" style="padding:2rem 0;">
+      <h2>Interactive Tools</h2>
+      <p>
+        Below is a placeholder for the image metadata extraction tool. When
+        implemented, visitors will be able to upload microscope TIFF/OME‑TIFF
+        files and view key metadata (e.g. resolution, frame rate, scaling) in
+        their browser. Support for ND2 files will be provided via a small
+        server‑side conversion service.
+      </p>
+      <div class="tool-placeholder">
+        <input type="file" id="file-input" accept=".tif,.tiff,.ome.tif,.ome.tiff" />
+        <button id="extract-btn" disabled>Extract Metadata</button>
+        <pre id="metadata-output" style="white-space: pre-wrap; margin-top: 1rem;"></pre>
+      </div>
+      <p style="margin-top:2rem;">
+        Additional tools (e.g. calculators, image viewers or neural network
+        demos) can be added here. Each tool should run client‑side when
+        possible to keep performance snappy.
+      </p>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Blaine Weiss. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <!-- Script for parsing TIFF/OME‑TIFF metadata and enabling the tool -->
+    <script src="js/tools.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blaine Weiss – Research Portal</title>
+    <!-- Apply saved colour scheme before CSS loads to prevent flash -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var useDark = stored ? stored === 'dark' : prefersDark;
+          if (useDark) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          /* ignore */
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- When you supply your own 3D models later, you can add a loader such as Three.js.
+         For now we use a CSS‑animated cube as a placeholder to avoid external scripts. -->
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo"><a href="index.html">Blaine Weiss</a></h1>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="publications.html">Publications &amp; CV</a></li>
+            <li><a href="tools.html">Tools</a></li>
+          </ul>
+        </nav>
+        <button id="mode-toggle" class="mode-toggle" aria-label="Toggle dark/light mode">
+          🌙
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h2>Awakened Fluorescence Imaging</h2>
+          <p>
+            Welcome to my research portal. Explore cutting‑edge awake‑brain imaging
+            projects, interactive tools and scientific publications.
+          </p>
+          <a class="cta-btn" href="portfolio.html">View Portfolio</a>
+        </div>
+        <div class="hero-3d">
+          <!-- CSS‑based rotating cube placeholder. You can later replace this entire
+               cube element with a Three.js canvas or your own 3D model. -->
+          <div class="cube" aria-label="3D scene placeholder">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+          </div>
+        </div>
+      </section>
+      <section class="updates">
+        <div class="container">
+          <h3>Latest Highlights</h3>
+          <p>
+            This area can be used to tease your latest blog posts, videos or
+            publications. Keeping content fresh helps with engagement and SEO.
+          </p>
+        </div>
+      </section>
+
+      <!-- Research videos gallery on the home page -->
+      <section class="gif-gallery-section" style="padding: 2rem 1rem;">
+        <div class="container">
+          <h3>Research Videos</h3>
+          <p>Scroll horizontally to explore short clips and GIFs from my imaging experiments.</p>
+          <div class="gif-gallery">
+            <!-- Replace these <img> elements with your own GIFs or videos. You can
+                 add more images by placing files in the `assets/gifs/` folder and
+                 adding additional <img> tags here. -->
+            <img src="assets/gifs/placeholder.gif" alt="Research video placeholder" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Blaine Weiss. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
