@@ -1,75 +1,45 @@
 // main.js
-// Handles dark/light mode toggle and initialises a simple 3D placeholder
-// using Three.js. When you have your own GLTF/OBJ models, replace the
-// geometry/material below with a loader (e.g. GLTFLoader) and add your
-// model to the scene.
+(function () {
+  // Footer year
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 
-(() => {
-  // Utility: update footer year
-  const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-  }
-
-  // Theme handling
-  const root = document.documentElement; // <html> element
-  const toggleBtn = document.querySelector('#mode-toggle, #theme-toggle');
-
-  /**
-   * Apply the given theme by toggling the `dark` class on <html>.
-   * @param {string} theme 'dark' or 'light'
-   */
+  // Apply theme helper
   function applyTheme(theme) {
-    const isDark = theme === 'dark';
-    if (isDark) {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
+    const root = document.documentElement;
+    if (theme === 'dark') root.classList.add('dark');
+    else root.classList.remove('dark');
   }
 
-  /**
-   * Update the toggle button icon based on the current theme.
-   */
-  function updateIcon() {
-    if (!toggleBtn) return;
-    const isDark = root.classList.contains('dark');
-    // Use sun for dark mode (to switch to light), moon for light mode (to switch to dark)
-    toggleBtn.textContent = isDark ? '☀️' : '🌙';
-  }
+  // Read saved and apply (in case head script was missed)
+  try {
+    const saved = localStorage.getItem('theme');
+    if (saved) applyTheme(saved);
+  } catch (_){}
 
-  // Read initial theme from localStorage (this runs after the inline pre-paint script)
-  const storedTheme = (() => {
-    try {
-      return localStorage.getItem('theme');
-    } catch (e) {
-      return null;
-    }
-  })();
-  if (storedTheme === 'dark' || storedTheme === 'light') {
-    applyTheme(storedTheme);
+  // Toggle button (support either id)
+  const btn = document.querySelector('#theme-toggle, #mode-toggle');
+  function refreshIcon() {
+    if (!btn) return;
+    const dark = document.documentElement.classList.contains('dark');
+    btn.textContent = dark ? '☀️' : '🌙';
   }
-  // Update icon on load
-  updateIcon();
-
-  // Toggle handler
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', () => {
-      const currentlyDark = root.classList.contains('dark');
-      const nextTheme = currentlyDark ? 'light' : 'dark';
-      applyTheme(nextTheme);
-      try {
-        localStorage.setItem('theme', nextTheme);
-      } catch (e) {
-        // localStorage might be unavailable in privacy mode; ignore
-      }
-      updateIcon();
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const dark = document.documentElement.classList.contains('dark');
+      const next = dark ? 'light' : 'dark';
+      try { localStorage.setItem('theme', next); } catch(_){}
+      applyTheme(next);
+      refreshIcon();
     });
+    refreshIcon();
   }
 
-  // Note: 3D placeholder using Three.js has been removed because external
-  // scripts cannot be loaded in this environment. The homepage now uses a
-  // CSS‑based rotating cube as a placeholder (see index.html and style.css).
-  // When deploying on your own server, you can include Three.js and your
-  // 3D models here to create a richer 3D experience.
+  // Keep multiple tabs in sync (optional)
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'theme' && (e.newValue === 'dark' || e.newValue === 'light')) {
+      applyTheme(e.newValue);
+      refreshIcon();
+    }
+  });
 })();
