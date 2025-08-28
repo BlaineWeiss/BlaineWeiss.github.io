@@ -134,7 +134,12 @@ a:hover {
   overflow: hidden;
   --text-colour: #e5e5e5;
 }
-
+/* ensure hero text actually uses the variable above */
+.hero.hero--gif .hero-title,
+.hero.hero--gif .hero-content,
+.hero.hero--gif .hero-content a {
+  color: var(--text-colour);
+}
 /* Optional: overlay for text legibility */
 .hero.hero--gif::before {
   content: "";
