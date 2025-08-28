@@ -125,7 +125,7 @@ a:hover {
   /* remove the gradient set on .hero */
   background-image: none;
   /* your GIF */
-  background-image: url('../assets/gifs/TESTsupp.gif');
+  background-image: url('../assets/gifs/TESTsupp.gif?v=YYYY-MM-DD');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
