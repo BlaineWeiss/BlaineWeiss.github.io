@@ -102,7 +102,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 4rem 1rem;
-  background-image: "assets/gifs/TESTsupp1.gif" /* linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0)); */
+  background-image: "../assets/gifs/TESTsupp1.gif" /* linear-gradient(135deg, rgba(0,0,0,0.05), rgba(0,0,0,0)); */
 }
 .hero-content {
   flex: 1 1 350px;
@@ -125,7 +125,7 @@ a:hover {
   /* remove the gradient set on .hero */
   background-image: none;
   /* your GIF */
-  background-image: url('../assets/gifs/TESTsupp.gif?v=YYYY-MM-DD');
+  background-image: url('../assets/gifs/TESTsupp.gif?v=2025-MM-DD');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
