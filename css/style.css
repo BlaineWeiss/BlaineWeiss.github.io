@@ -134,7 +134,7 @@ a:hover {
 }
 
 /* Optional: overlay for text legibility */
-.hero--gif::before {
+.hero.hero--gif::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -150,9 +150,9 @@ a:hover {
 }
 
 /* Keep your content above the overlay */
-.hero--gif .container,
-.hero--gif .hero-content,
-.hero--gif .hero-3d {
+.hero.hero--gif .container,
+.hero.hero--gif .hero-content,
+.hero.hero--gif .hero-3d {
   position: relative;
   z-index: 1;
 }
