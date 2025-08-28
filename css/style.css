@@ -118,6 +118,54 @@ a:hover {
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
+
+/* Hero with GIF background */
+.hero--gif {
+  position: relative;
+  /* remove the gradient set on .hero */
+  background-image: none;
+  /* your GIF */
+  background-image: url('assets/gifs/astro_vessels_hero.gif?v=2025-08-27');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 420px; /* make sure it has height on empty screens */
+  overflow: hidden;
+}
+
+/* Optional: overlay for text legibility */
+.hero--gif::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* left-to-right fade so text on the left pops */
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.20) 40%,
+    rgba(0,0,0,0.00) 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Keep your content above the overlay */
+.hero--gif .container,
+.hero--gif .hero-content,
+.hero--gif .hero-3d {
+  position: relative;
+  z-index: 1;
+}
+
+/* Respect reduced-motion users (swap to a still image) */
+@media (prefers-reduced-motion: reduce) {
+  .hero--gif {
+    background-image: url('assets/gifs/astro_vessels_hero_still.jpg');
+  }
+}
+
+
+
 .cta-btn {
   display: inline-block;
   padding: 0.7rem 1.2rem;
