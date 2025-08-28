@@ -117,6 +117,7 @@ a:hover {
   font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
+  color: var(--text--colour);
 }
 
 /* Hero with GIF background */
@@ -131,7 +132,7 @@ a:hover {
   background-repeat: no-repeat;
   min-height: 420px; /* make sure it has height on empty screens */
   overflow: hidden;
-  text-colour:#e5e5e5
+  --text-colour: #e5e5e5;
 }
 
 /* Optional: overlay for text legibility */
