@@ -315,10 +315,9 @@ a:hover {
 
 /* generic icon utility */
 .icon {
-  width: 1.25em;           /* scales with text size */
-  height: 1.25em;
-  vertical-align: -0.15em; /* aligns with text baseline nicely */
-  fill: currentColor;      /* <-- critical: icon inherits text color */
+  width: 1em;               /* scales with font-size */
+  height: 1em;
+  fill: currentColor;       /* follow text color (dark mode safe) */
+  vertical-align: -0.125em; /* aligns baseline similar to .bi */
   display: inline-block;
-  margin-right: .4rem;
 }
