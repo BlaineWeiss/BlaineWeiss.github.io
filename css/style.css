@@ -131,6 +131,7 @@ a:hover {
   background-repeat: no-repeat;
   min-height: 420px; /* make sure it has height on empty screens */
   overflow: hidden;
+  text-colour:#e5e5e5
 }
 
 /* Optional: overlay for text legibility */
