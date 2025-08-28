@@ -120,7 +120,7 @@ a:hover {
 }
 
 /* Hero with GIF background */
-.hero--gif {
+.hero.hero--gif {
   position: relative;
   /* remove the gradient set on .hero */
   background-image: none;
