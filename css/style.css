@@ -310,3 +310,15 @@ a:hover {
     height: 350px;
   }
 }
+.social-link { text-decoration: none; color: var(--text-colour); }
+.social-link:hover { color: var(--accent-colour); }
+
+/* generic icon utility */
+.icon {
+  width: 1.25em;           /* scales with text size */
+  height: 1.25em;
+  vertical-align: -0.15em; /* aligns with text baseline nicely */
+  fill: currentColor;      /* <-- critical: icon inherits text color */
+  display: inline-block;
+  margin-right: .4rem;
+}
