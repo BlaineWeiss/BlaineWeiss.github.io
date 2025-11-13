@@ -68,7 +68,7 @@ h1 { margin: 0 0 6px; font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
 
 @media (max-width: 760px) {
   .inner {
-    grid-template-columns: 1fr;        /* photo on top, text below */
+    grid-template-columns: 1fr;    /* photo on top, text below */
   }
 
   .card {
@@ -79,28 +79,29 @@ h1 { margin: 0 0 6px; font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
     gap: 10px;
   }
 
-  /* Mobile-specific row layout */
+  /* Mobile: use flex so icon + text stay aligned */
   .row {
-    grid-template-columns: 44px minmax(0, 1fr);
-    gap: 8px 10px;
+    display: flex;
     align-items: flex-start;
+    gap: 10px;
+  }
+
+  .row .icon {
+    flex: 0 0 44px;     /* fixed icon width */
+    margin-top: 4px;    /* tiny nudge down so it centers visually */
+  }
+
+  .row .label,
+  .row > div:last-child {
+    flex: 1 1 auto;
   }
 
   .row .label {
     font-size: 13px;
     margin-bottom: 2px;
   }
-
-  /* Make the link text sit under the label in the same column */
-  .row > div:last-child {
-    grid-column: 2 / 3;
-  }
-  /* Make icons align with the top of the text, not the vertical center */
-  .row .icon {
-    align-self: flex-start;
-    margin-top: 0;   /* tweak if you want a tiny offset */
-  }
 }
+
 
 
 a { color: var(--text); text-decoration: none; }
