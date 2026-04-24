@@ -24,7 +24,7 @@ navbar-links:
   Resources:
     - Github Repositories: "https://github.com/BlaineWeiss"
     #- Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+    #- Learn markdown: "https://www.markdowntutorial.com/"
   #Author's home: "https://deanattali.com"
 
 ################
@@ -141,7 +141,7 @@ page-col: "#FFFFFF"
 text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
-navbar-col: "#EAEAEA"
+navbar-col: "#000000" #EAEAEA"
 
 #"#404040" 
 navbar-border-col: "#DDDDDD"
