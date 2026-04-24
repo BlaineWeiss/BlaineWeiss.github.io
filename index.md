@@ -129,7 +129,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   }
 }
 </style>
-
+---
 <div class="hero-panel">
 
 # Hello, I’m Blaine Weiss.
