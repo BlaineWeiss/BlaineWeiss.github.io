@@ -218,7 +218,7 @@ img {
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
   font-weight: 800;
-  color: var(--navbar-text-col);
+  color: #000000 /*var(--navbar-text-col); */
 }
 
 .navbar-toggler {
