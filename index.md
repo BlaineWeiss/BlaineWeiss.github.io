@@ -155,7 +155,7 @@ My goal is to build analysis systems that make difficult brain imaging experimen
     Publications
   </div>
   <div class="metric">
-    <strong>16+</strong>
+    <strong>20+</strong>
     Posters & presentations
   </div>
   <div class="metric">
@@ -163,11 +163,11 @@ My goal is to build analysis systems that make difficult brain imaging experimen
     Sanders-Brown affiliation
   </div>
   <div class="metric">
-    <strong>2P</strong>
+    <strong>In-Vivo</strong>
     Awake brain imaging
   </div>
 </div>
-
+---
 
 ## Research Focus
 
