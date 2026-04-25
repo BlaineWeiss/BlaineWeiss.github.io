@@ -205,9 +205,9 @@ cover-img: "/assets/img/TESTsupp1.gif"
   background:
     linear-gradient(
       90deg,
-      rgba(15, 23, 42, 0.45) 0%,
-      rgba(15, 23, 42, 0.2) 45%,
-      rgba(15, 23, 42, 0.01) 100%
+      rgba(15, 23, 42, 0.25) 0%,
+      rgba(15, 23, 42, 0.1) 45%,
+      rgba(15, 23, 42, 0) 100%
     );
   z-index: 1;
 }
@@ -295,9 +295,9 @@ cover-img: "/assets/img/TESTsupp1.gif"
     background:
       linear-gradient(
         180deg,
-        rgba(15, 23, 42, 0.2) 0%,
-        rgba(15, 23, 42, 0.9) 65%,
-        rgba(15, 23, 42, 0.98) 100%
+        rgba(15, 23, 42, 0.1) 0%,
+        rgba(15, 23, 42, 0.2) 65%,
+        rgba(15, 23, 42, 0.3) 100%
       );
   }
 
