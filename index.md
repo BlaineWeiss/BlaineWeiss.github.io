@@ -221,7 +221,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     </div>
 
     <div>
-      <img class="bw-image" src="/assets/img/LAVAdemo composite.tif" alt="Awake fluorescence microscopy example">
+      <img class="bw-image" src="/assets/img/LAVAdemo-composite.tif" alt="Awake fluorescence microscopy example">
     </div>
   </div>
 </div>
