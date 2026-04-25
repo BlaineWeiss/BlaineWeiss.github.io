@@ -166,6 +166,156 @@ cover-img: "/assets/img/TESTsupp1.gif"
 }
 </style>
 
+
+
+
+
+<style>
+/* Full-width hero that breaks out of Beautiful Jekyll's narrow content column */
+.bw-full-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-height: 520px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #111827;
+}
+
+/* Replace the background-image URL with your wide image/GIF/thumbnail */
+.bw-full-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/img/YOUR-WIDE-IMAGE-HERE.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+  z-index: 0;
+}
+
+/* Dark overlay so text stays readable */
+.bw-full-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.92) 0%,
+      rgba(15, 23, 42, 0.68) 45%,
+      rgba(15, 23, 42, 0.18) 100%
+    );
+  z-index: 1;
+}
+
+.bw-full-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.bw-full-hero-content {
+  max-width: 680px;
+}
+
+.bw-full-hero-kicker {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.28);
+  color: white;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bw-full-hero h1 {
+  margin: 0 0 1rem;
+  color: white;
+  font-size: clamp(2.35rem, 5vw, 4.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.bw-full-hero p {
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.65;
+  margin: 0 0 1.6rem;
+}
+
+.bw-full-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.bw-hero-button {
+  display: inline-block;
+  padding: 0.75rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.bw-hero-button:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.bw-hero-button-primary {
+  background: white;
+  color: #111827 !important;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.bw-hero-button-secondary {
+  background: rgba(255,255,255,0.12);
+  color: white !important;
+  border: 1px solid rgba(255,255,255,0.35);
+}
+
+@media (max-width: 700px) {
+  .bw-full-hero {
+    min-height: 560px;
+    align-items: flex-end;
+  }
+
+  .bw-full-hero::after {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(15, 23, 42, 0.2) 0%,
+        rgba(15, 23, 42, 0.9) 65%,
+        rgba(15, 23, 42, 0.98) 100%
+      );
+  }
+
+  .bw-full-hero-inner {
+    padding: 4rem 1.15rem;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
 <div class="bw-hero">
   <h1>Hello, I’m Blaine Weiss.</h1>
 
@@ -225,6 +375,38 @@ cover-img: "/assets/img/TESTsupp1.gif"
     </div>
   </div>
 </div>
+
+
+
+
+<section class="bw-full-hero">
+  <div class="bw-full-hero-inner">
+    <div class="bw-full-hero-content">
+      <span class="bw-full-hero-kicker">In vivo awake microscopy · Astrocyte Ca²⁺ · Neurovascular coupling</span>
+
+      <h1>Awake fluorescence imaging meets computational analysis.</h1>
+
+      <p>
+        I study astrocyte subcellular activity and vascular dynamics in the awake brain,
+        combining two-photon microscopy, quantitative image analysis, and custom software
+        development for reproducible biological video analysis.
+      </p>
+
+      <div class="bw-full-hero-actions">
+        <a class="bw-hero-button bw-hero-button-primary" href="/research/">View Research</a>
+        <a class="bw-hero-button bw-hero-button-secondary" href="/STONE-LAVA/">Explore STONE-LAVA</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
 
 <div class="bw-banner">
   <h2>Featured Platform: STONE-LAVA</h2>
