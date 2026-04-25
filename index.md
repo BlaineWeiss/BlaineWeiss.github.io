@@ -1,435 +1,415 @@
 ---
 layout: home
 title: Awake Fluorescence Imaging
-subtitle: Computational tools for intravital brain imaging, vascular dynamics, and astrocyte signaling
+subtitle: by Blaine Weiss
 cover-img: "/assets/img/TESTsupp1.gif"
 ---
 
 <style>
-.hero-panel {
-  background: linear-gradient(135deg, rgba(5,10,20,0.92), rgba(20,35,55,0.82));
+.bw-section {
+  margin: 2.5rem 0;
+}
+
+.bw-hero {
+  background: linear-gradient(135deg, #111827, #374151);
   color: white;
-  padding: 2.5rem;
-  border-radius: 24px;
-  margin: 2rem 0;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+  padding: 2.25rem;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.22);
 }
 
-.hero-panel h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
+.bw-hero h1,
+.bw-hero p {
+  color: white;
 }
 
-.hero-panel p {
-  font-size: 1.08rem;
+.bw-hero h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.bw-hero p {
+  font-size: 1.05rem;
   line-height: 1.65;
 }
 
-.badge-row {
+.bw-badge-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.55rem;
   margin-top: 1.2rem;
 }
 
-.badge {
+.bw-badge {
+  display: inline-block;
   background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.25);
-  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(255,255,255,0.35);
+  padding: 0.35rem 0.7rem;
   border-radius: 999px;
-  font-size: 0.9rem;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  gap: 1.2rem;
-  margin: 2rem 0;
-}
-
-.feature-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 1.4rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  border: 1px solid #eeeeee;
-}
-
-.feature-card h3 {
-  margin-top: 0;
-}
-
-.split-section {
-  display: grid;
-  grid-template-columns: minmax(0,1.2fr) minmax(260px,0.8fr);
-  gap: 2rem;
-  align-items: center;
-  margin: 3rem 0;
-}
-
-.side-image {
-  width: 100%;
-  border-radius: 22px;
-  box-shadow: 0 14px 38px rgba(0,0,0,0.18);
-}
-
-.banner {
-  background: linear-gradient(90deg, #111827, #374151);
+  font-size: 0.82rem;
   color: white;
-  padding: 1.7rem;
-  border-radius: 20px;
-  margin: 2.5rem 0 1.5rem 0;
 }
 
-.project-card {
-  border-left: 5px solid #c2410c;
-  background: #fff7ed;
-  padding: 1.4rem;
-  border-radius: 16px;
-  margin: 1rem 0;
-}
-
-.metric-row {
+.bw-metrics {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
   gap: 1rem;
-  margin: 2rem 0;
+  margin: 1.8rem 0 2.2rem;
 }
 
-.metric {
+.bw-metric {
   text-align: center;
-  padding: 1.2rem;
-  border-radius: 18px;
+  padding: 1.15rem;
+  border-radius: 16px;
   background: #f8fafc;
   border: 1px solid #e5e7eb;
 }
 
-.metric strong {
+.bw-metric strong {
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.65rem;
+  color: #111827;
 }
 
-.cta-box {
+.bw-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(240px, 0.85fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.bw-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+}
+
+.bw-banner {
+  background: linear-gradient(90deg, #111827, #374151);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 18px;
+  margin: 2.75rem 0 1.25rem;
+}
+
+.bw-banner h2,
+.bw-banner p {
+  color: white;
+  margin: 0;
+}
+
+.bw-banner p {
+  margin-top: 0.4rem;
+}
+
+.bw-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.bw-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.35rem;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+  border: 1px solid #eeeeee;
+}
+
+.bw-card h3 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.bw-project {
+  border-left: 5px solid #c2410c;
+  background: #fff7ed;
+  padding: 1.35rem;
+  border-radius: 16px;
+  margin: 1rem 0;
+}
+
+.bw-project h3 {
+  margin-top: 0;
+}
+
+.bw-project ul,
+.bw-card ul {
+  padding-left: 1.25rem;
+}
+
+.bw-cta {
   text-align: center;
   padding: 2rem;
   background: #0f172a;
   color: white;
-  border-radius: 24px;
+  border-radius: 22px;
   margin: 3rem 0;
 }
 
-.cta-box a {
+.bw-cta h2,
+.bw-cta p {
+  color: white;
+}
+
+.bw-cta a {
   color: #93c5fd;
   font-weight: 700;
 }
 
 @media (max-width: 800px) {
-  .split-section {
+  .bw-split {
     grid-template-columns: 1fr;
   }
 }
 </style>
----
-<div class="hero-panel">
 
-# Hello, I’m Blaine Weiss.
+<div class="bw-hero">
+  <h1>Hello, I’m Blaine Weiss.</h1>
 
-I am a graduate student at the University of Kentucky and a researcher at the Sanders-Brown Center on Aging. My work focuses on **awake intravital fluorescence microscopy**, **mouse models of dementia**, **astrocyte calcium signaling**, **vascular dynamics**, and the development of computational tools for extracting biological meaning from complex imaging datasets.
+  <p>
+    I am a graduate student at the University of Kentucky and a researcher at the Sanders-Brown Center on Aging. My work focuses on <strong>awake intravital fluorescence microscopy</strong>, <strong>mouse models of dementia</strong>, <strong>astrocyte calcium signaling</strong>, <strong>vascular dynamics</strong>, and the development of computational tools for extracting biological meaning from complex imaging datasets.
+  </p>
 
-My goal is to build analysis systems that make difficult brain imaging experiments more quantitative, reproducible, and visually interpretable.
+  <p>
+    My goal is to build analysis systems that make difficult brain imaging experiments more quantitative, reproducible, and visually interpretable.
+  </p>
 
-<div class="badge-row">
-  <span class="badge">Awake two-photon microscopy</span>
-  <span class="badge">Astrocyte Ca²⁺ signaling</span>
-  <span class="badge">Neurovascular coupling</span>
-  <span class="badge">Field electrophysiology</span>
-  <span class="badge">Image analysis software</span>
-  <span class="badge">STONE-LAVA</span>
+  <div class="bw-badge-row">
+    <span class="bw-badge">Awake two-photon microscopy</span>
+    <span class="bw-badge">Astrocyte Ca²⁺ signaling</span>
+    <span class="bw-badge">Neurovascular coupling</span>
+    <span class="bw-badge">Field electrophysiology</span>
+    <span class="bw-badge">Image analysis software</span>
+    <span class="bw-badge">STONE-LAVA</span>
+  </div>
 </div>
 
-</div>
-
-<div class="metric-row">
-  <div class="metric">
+<div class="bw-metrics">
+  <div class="bw-metric">
     <strong>8+</strong>
     Publications
   </div>
-  <div class="metric">
-    <strong>20+</strong>
+  <div class="bw-metric">
+    <strong>16+</strong>
     Posters & presentations
   </div>
-  <div class="metric">
+  <div class="bw-metric">
     <strong>2017</strong>
     Sanders-Brown affiliation
   </div>
-  <div class="metric">
-    <strong>In-Vivo</strong>
+  <div class="bw-metric">
+    <strong>2P</strong>
     Awake brain imaging
   </div>
 </div>
----
 
-## Research Focus
+<div class="bw-section">
+  <h2>Research Focus</h2>
 
-<div class="split-section">
+  <div class="bw-split">
+    <div>
+      <p>
+        My research centers on understanding how cellular activity and cerebrovascular dynamics interact in the living brain, particularly in the context of dementia and Alzheimer’s disease-related pathology.
+      </p>
 
-<div>
+      <p>
+        Using awake intravital microscopy, I study activity patterns across astrocyte somata, processes, and perivascular endfeet while simultaneously examining vascular responses such as dilation and constriction. These datasets are rich, dynamic, and difficult to analyze with conventional tools, which led me to build custom software for event detection, segmentation, synchronization analysis, and vascular-cell coupling.
+      </p>
+    </div>
 
-My research centers on understanding how cellular activity and cerebrovascular dynamics interact in the living brain, particularly in the context of dementia and Alzheimer’s disease-related pathology.
-
-Using awake intravital microscopy, I study activity patterns across astrocyte somata, processes, and perivascular endfeet while simultaneously examining vascular responses such as dilation and constriction. These datasets are rich, dynamic, and difficult to analyze with conventional tools, which led me to build custom software for event detection, segmentation, synchronization analysis, and vascular-cell coupling.
-
+    <div>
+      <img class="bw-image" src="/assets/img/PLACEHOLDER_MICROSCOPY_GIF.gif" alt="Awake fluorescence microscopy example">
+    </div>
+  </div>
 </div>
 
-<div>
-
-<img class="side-image" src="/assets/img/PLACEHOLDER_MICROSCOPY_GIF.gif" alt="Awake fluorescence microscopy example">
-
+<div class="bw-banner">
+  <h2>Featured Platform: STONE-LAVA</h2>
+  <p>A computational framework for spatial and temporal analysis of brain activity, vascular behavior, and multimodal fluorescence imaging datasets.</p>
 </div>
 
+<div class="bw-project">
+  <h3>STONE</h3>
+  <p><strong>Spatial & Temporal Observation of Network Events</strong></p>
+
+  <p>
+    STONE is designed for functional imaging analysis of cellular activity. It includes tools for activity-based cell detection, filtering, event detection, waveform extraction, and network-level synchrony analysis.
+  </p>
+
+  <ul>
+    <li>Activity-informed ROI detection</li>
+    <li>Subcellular signal extraction</li>
+    <li>Calcium event detection</li>
+    <li>Network synchrony and correlation analysis</li>
+    <li>Export workflows for reproducible downstream analysis</li>
+  </ul>
 </div>
 
+<div class="bw-project">
+  <h3>LAVA</h3>
+  <p><strong>Localized Analysis of Vascular Astrocytes</strong></p>
 
-<div class="banner">
+  <p>
+    LAVA was developed to compare stimulation-induced vascular motion with local perivascular cellular signaling. It was named for its original use case: measuring astrocyte endfoot activity around cerebral arterioles.
+  </p>
 
-## Featured Platform: STONE-LAVA
-
-A computational framework for spatial and temporal analysis of brain activity, vascular behavior, and multimodal fluorescence imaging datasets.
-
+  <ul>
+    <li>Vessel-associated ROI analysis</li>
+    <li>Perivascular astrocyte/endfoot signal quantification</li>
+    <li>Dilation and constriction tracking</li>
+    <li>Event-locked vascular-cell comparisons</li>
+    <li>Multimodal image/signal integration</li>
+  </ul>
 </div>
 
-<div class="project-card">
+<div class="bw-section">
+  <div class="bw-split">
+    <div>
+      <h2>Why this matters</h2>
 
-### STONE  
-**Spatial & Temporal Observation of Network Events**
+      <p>
+        Awake fluorescence imaging produces data that are spatially complex, temporally dynamic, and biologically heterogeneous. Manual analysis is often slow, subjective, and difficult to reproduce.
+      </p>
 
-STONE is designed for functional imaging analysis of cellular activity. It includes tools for activity-based cell detection, filtering, event detection, waveform extraction, and network-level synchrony analysis.
+      <p>
+        My computational work aims to bridge this gap by creating tools that can detect biologically meaningful activity patterns, compare cellular signaling with vascular behavior, quantify network-level dynamics, preserve metadata and analysis provenance, and generate figure-ready outputs for publication and collaboration.
+      </p>
+    </div>
 
-Core capabilities include:
-
-- Activity-informed ROI detection  
-- Subcellular signal extraction  
-- Calcium event detection  
-- Network synchrony and correlation analysis  
-- Export workflows for reproducible downstream analysis  
-
+    <div>
+      <img class="bw-image" src="/assets/img/PLACEHOLDER_STONE_LAVA_SCREENSHOT.png" alt="STONE-LAVA software screenshot">
+    </div>
+  </div>
 </div>
 
-<div class="project-card">
+<div class="bw-section">
+  <h2>Research Themes</h2>
 
-### LAVA  
-**Localized Analysis of Vascular Astrocytes**
+  <div class="bw-card-grid">
+    <div class="bw-card">
+      <h3>Awake Intravital Microscopy</h3>
+      <p>Imaging brain activity in awake mouse models to capture cellular and vascular dynamics under more physiologically relevant conditions.</p>
+    </div>
 
-LAVA was developed to compare stimulation-induced vascular motion with local perivascular cellular signaling. It was named for its original use case: measuring astrocyte endfoot activity around cerebral arterioles.
+    <div class="bw-card">
+      <h3>Astrocyte-Vascular Coupling</h3>
+      <p>Quantifying how astrocyte compartments, especially perivascular endfeet, relate to nearby arteriole motion and stimulation-induced vascular responses.</p>
+    </div>
 
-Core capabilities include:
+    <div class="bw-card">
+      <h3>Dementia Models</h3>
+      <p>Applying advanced imaging and analysis tools to mouse models relevant to Alzheimer’s disease and neurodegenerative pathology.</p>
+    </div>
 
-- Vessel-associated ROI analysis  
-- Perivascular astrocyte/endfoot signal quantification  
-- Dilation and constriction tracking  
-- Event-locked vascular-cell comparisons  
-- Multimodal image/signal integration  
+    <div class="bw-card">
+      <h3>Functional Signal Analysis</h3>
+      <p>Developing pipelines for fluorescence signal processing, event detection, filtering, synchronization, and network-level activity mapping.</p>
+    </div>
 
+    <div class="bw-card">
+      <h3>Software Development</h3>
+      <p>Building MATLAB-based tools that streamline complex imaging analyses and improve reproducibility across experiments.</p>
+    </div>
+
+    <div class="bw-card">
+      <h3>Data Visualization</h3>
+      <p>Creating visual and quantitative summaries of cellular activity, vascular motion, network structure, and compartment-specific signaling.</p>
+    </div>
+  </div>
 </div>
 
-<div class="split-section">
+<div class="bw-section">
+  <h2>Publications & Scientific Output</h2>
 
-<div>
+  <p>
+    My work includes peer-reviewed publications, conference presentations, poster awards, and computational tools related to neurodegeneration, brain imaging, and functional analysis.
+  </p>
 
-## Why this matters
+  <div class="bw-card-grid">
+    <div class="bw-card">
+      <h3>Publications</h3>
+      <p>Add selected first-author and co-author publications here.</p>
+      <p><strong>Weiss et al.</strong> Title of publication. <em>Journal Name</em>. Year.</p>
+      <p><a href="#">Google Scholar</a> · <a href="#">PubMed</a></p>
+    </div>
 
-Awake fluorescence imaging produces data that are spatially complex, temporally dynamic, and biologically heterogeneous. Manual analysis is often slow, subjective, and difficult to reproduce.
+    <div class="bw-card">
+      <h3>Posters & Presentations</h3>
+      <p>Add selected conference posters, talks, and scientific presentations here.</p>
+      <ul>
+        <li>Markesbery Symposium</li>
+        <li>AAIC</li>
+        <li>Neuroscience meetings</li>
+        <li>University research events</li>
+      </ul>
+    </div>
 
-My computational work aims to bridge this gap by creating tools that can:
-
-- Detect biologically meaningful activity patterns  
-- Compare cellular signaling with vascular behavior  
-- Quantify network-level dynamics  
-- Preserve metadata and analysis provenance  
-- Generate figure-ready outputs for publication and collaboration  
-
+    <div class="bw-card">
+      <h3>Recognition</h3>
+      <p>Add awards, fellowships, cover art, poster awards, or invited presentation highlights here.</p>
+    </div>
+  </div>
 </div>
 
-<div>
+<div class="bw-section">
+  <h2>Featured Visuals</h2>
 
-<img class="side-image" src="/assets/img/PLACEHOLDER_STONE_LAVA_SCREENSHOT.png" alt="STONE-LAVA software screenshot">
+  <div class="bw-card-grid">
+    <div class="bw-card">
+      <img class="bw-image" src="/assets/img/PLACEHOLDER_FIGURE_1.gif" alt="Microscopy movie placeholder">
+      <h3>Awake Imaging Movie</h3>
+      <p>Short description of what this movie shows.</p>
+    </div>
 
+    <div class="bw-card">
+      <img class="bw-image" src="/assets/img/PLACEHOLDER_FIGURE_2.png" alt="ROI analysis placeholder">
+      <h3>Activity Detection</h3>
+      <p>Short description of segmentation, ROI detection, or calcium activity extraction.</p>
+    </div>
+
+    <div class="bw-card">
+      <img class="bw-image" src="/assets/img/PLACEHOLDER_FIGURE_3.png" alt="Vascular analysis placeholder">
+      <h3>Vascular-Cell Coupling</h3>
+      <p>Short description of arteriole motion and perivascular astrocyte signaling.</p>
+    </div>
+  </div>
 </div>
 
+<div class="bw-section">
+  <h2>STONE-LAVA Under Construction</h2>
+
+  <p>
+    STONE-LAVA is currently being developed as a unified analysis environment for multimodal fluorescence imaging datasets.
+  </p>
+
+  <ul>
+    <li>Improved event detection workflows</li>
+    <li>Metadata-aware export formats</li>
+    <li>Multichannel imaging compatibility</li>
+    <li>Vascular-cell coupling modules</li>
+    <li>Reproducible analysis outputs</li>
+    <li>Publication-ready visualization tools</li>
+  </ul>
+
+  <p>
+    <a href="https://github.com/BlaineWeiss/STONE-LAVA">View the GitHub Repository</a>
+  </p>
 </div>
 
-
-## Research Themes
-
-<div class="feature-grid">
-
-<div class="feature-card">
-
-### Awake Intravital Microscopy
-
-Imaging brain activity in awake mouse models to capture cellular and vascular dynamics under more physiologically relevant conditions.
-
-</div>
-
-<div class="feature-card">
-
-### Astrocyte-Vascular Coupling
-
-Quantifying how astrocyte compartments, especially perivascular endfeet, relate to nearby arteriole motion and stimulation-induced vascular responses.
-
-</div>
-
-<div class="feature-card">
-
-### Dementia Models
-
-Applying advanced imaging and analysis tools to mouse models relevant to Alzheimer’s disease and neurodegenerative pathology.
-
-</div>
-
-<div class="feature-card">
-
-### Functional Signal Analysis
-
-Developing pipelines for fluorescence signal processing, event detection, filtering, synchronization, and network-level activity mapping.
-
-</div>
-
-<div class="feature-card">
-
-### Software Development
-
-Building MATLAB-based tools that streamline complex imaging analyses and improve reproducibility across experiments.
-
-</div>
-
-<div class="feature-card">
-
-### Data Visualization
-
-Creating visual and quantitative summaries of cellular activity, vascular motion, network structure, and compartment-specific signaling.
-
-</div>
-
-</div>
-
-
-
-## Publications & Scientific Output
-
-My work includes peer-reviewed publications, conference presentations, poster awards, and computational tools related to neurodegeneration, brain imaging, and functional analysis.
-
-<div class="feature-grid">
-
-<div class="feature-card">
-
-### Publications
-
-Add selected first-author and co-author publications here.
-
-Example format:
-
-**Weiss et al.** Title of publication. *Journal Name*. Year.
-
-[Google Scholar](#) · [PubMed](#)
-
-</div>
-
-<div class="feature-card">
-
-### Posters & Presentations
-
-Add selected conference posters, talks, and scientific presentations here.
-
-Suggested highlights:
-
-- Markesbery Symposium  
-- AAIC  
-- Neuroscience meetings  
-- University research events  
-
-</div>
-
-<div class="feature-card">
-
-### Recognition
-
-Add awards, fellowships, cover art, poster awards, or invited presentation highlights here.
-
-Suggested entries:
-
-- Journal cover art  
-- Outstanding poster awards  
-- Conference fellowships  
-
-</div>
-
-</div>
-
-
-
-## Featured Visuals
-
-Use this section to showcase microscopy videos, vascular motion overlays, ROI maps, software screenshots, or figure panels.
-
-<div class="feature-grid">
-
-<div class="feature-card">
-<img class="side-image" src="/assets/img/PLACEHOLDER_FIGURE_1.gif" alt="Microscopy movie placeholder">
-
-### Awake Imaging Movie
-
-Short description of what this movie shows.
-
-</div>
-
-<div class="feature-card">
-<img class="side-image" src="/assets/img/PLACEHOLDER_FIGURE_2.png" alt="ROI analysis placeholder">
-
-### Activity Detection
-
-Short description of segmentation, ROI detection, or calcium activity extraction.
-
-</div>
-
-<div class="feature-card">
-<img class="side-image" src="/assets/img/PLACEHOLDER_FIGURE_3.png" alt="Vascular analysis placeholder">
-
-### Vascular-Cell Coupling
-
-Short description of arteriole motion and perivascular astrocyte signaling.
-
-</div>
-
-</div>
-
-
-
-## Current Development
-
-## STONE-LAVA Under Construction
-
-STONE-LAVA is currently being developed as a unified analysis environment for multimodal fluorescence imaging datasets. Planned and ongoing features include:
-
-- Improved event detection workflows  
-- Metadata-aware export formats  
-- Multichannel imaging compatibility  
-- Vascular-cell coupling modules  
-- Reproducible analysis outputs  
-- Publication-ready visualization tools  
-
-Follow the project here:
-
-[GitHub Repository](https://github.com/BlaineWeiss/STONE-LAVA)
-
-
-
-<div class="cta-box">
-
-## Interested in collaboration?
-
-I am interested in projects involving awake brain imaging, astrocyte biology, neurovascular coupling, Alzheimer’s disease models, image analysis, and computational tool development.
-
-[View my CV](#) · [GitHub](https://github.com/BlaineWeiss) · [Google Scholar](#) · [Contact](mailto:YOUR_EMAIL_HERE)
-
+<div class="bw-cta">
+  <h2>Interested in collaboration?</h2>
+
+  <p>
+    I am interested in projects involving awake brain imaging, astrocyte biology, neurovascular coupling, Alzheimer’s disease models, image analysis, and computational tool development.
+  </p>
+
+  <p>
+    <a href="#">View my CV</a> ·
+    <a href="https://github.com/BlaineWeiss">GitHub</a> ·
+    <a href="#">Google Scholar</a> ·
+    <a href="mailto:YOUR_EMAIL_HERE">Contact</a>
+  </p>
 </div>
