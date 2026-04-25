@@ -205,9 +205,9 @@ cover-img: "/assets/img/TESTsupp1.gif"
   background:
     linear-gradient(
       90deg,
-      rgba(15, 23, 42, 0.92) 0%,
-      rgba(15, 23, 42, 0.68) 45%,
-      rgba(15, 23, 42, 0.18) 100%
+      rgba(15, 23, 42, 0.45) 0%,
+      rgba(15, 23, 42, 0.2) 45%,
+      rgba(15, 23, 42, 0.01) 100%
     );
   z-index: 1;
 }
