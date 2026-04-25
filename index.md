@@ -339,11 +339,11 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 <div class="bw-metrics">
   <div class="bw-metric">
-    <strong>8+</strong>
+    <strong>9</strong>
     Publications
   </div>
   <div class="bw-metric">
-    <strong>16+</strong>
+    <strong>20+</strong>
     Posters & presentations
   </div>
   <div class="bw-metric">
@@ -351,7 +351,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     Sanders-Brown affiliation
   </div>
   <div class="bw-metric">
-    <strong>2P</strong>
+    <strong>In-Vivo</strong>
     Awake brain imaging
   </div>
 </div>
