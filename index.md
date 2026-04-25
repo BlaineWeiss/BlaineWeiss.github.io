@@ -189,7 +189,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/assets/img/YOUR-WIDE-IMAGE-HERE.jpg");
+  background-image: url("/assets/img/LAVAconceptart.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -384,12 +384,10 @@ cover-img: "/assets/img/TESTsupp1.gif"
     <div class="bw-full-hero-content">
       <span class="bw-full-hero-kicker">In vivo awake microscopy · Astrocyte Ca²⁺ · Neurovascular coupling</span>
 
-      <h1>Awake fluorescence imaging meets computational analysis.</h1>
+      <h1>STONE-LAVA</h1>
 
       <p>
-        I study astrocyte subcellular activity and vascular dynamics in the awake brain,
-        combining two-photon microscopy, quantitative image analysis, and custom software
-        development for reproducible biological video analysis.
+        Spatial Temportal Observation of Network Events
       </p>
 
       <div class="bw-full-hero-actions">
