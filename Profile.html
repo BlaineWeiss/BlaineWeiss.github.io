@@ -387,7 +387,7 @@ document.getElementById('dlvcf').addEventListener('click', function(e) {
     "URL:https://github.com/BlaineWeiss",
     "URL:https://norris.createuky.net/",
     "END:VCARD"
-  ].join("\\n");
+  ].join("\r\n");
   const blob = new Blob([v], {type: "text/vcard"});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
