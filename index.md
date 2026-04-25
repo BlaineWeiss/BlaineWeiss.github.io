@@ -176,7 +176,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  min-height: 800px;
+  min-height: 920px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -205,8 +205,8 @@ cover-img: "/assets/img/TESTsupp1.gif"
   background:
     linear-gradient(
       90deg,
-      rgba(15, 23, 42, 0.6) 0%,
-      rgba(15, 23, 42, 0.4) 45%,
+      rgba(15, 23, 42, 0.5) 0%,
+      rgba(15, 23, 42, 0.3) 45%,
       rgba(15, 23, 42, 0.1) 100%
     );
   z-index: 1;
