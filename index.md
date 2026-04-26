@@ -357,7 +357,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 .bw-scroll-hero-content {
   max-width: 680px;
   /* padding: 5rem 0; */
-  padding-top: 28vh;
+  padding-top: 20vh;
   padding-bottom: 5rem;
 }
 
