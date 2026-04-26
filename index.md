@@ -187,9 +187,9 @@ cover-img: "/assets/img/TESTsupp1.gif"
 /* Replace the background-image URL with your wide image/GIF/thumbnail */
 .bw-full-hero::before {
   content: "";
-  position: sticky;
+  position: absolute;
   inset: 0;
-  background-image: url("/assets/img/LAVAconceptart.png");
+  background-image: var(--hero-image) /* url("/assets/img/LAVAconceptart.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -381,6 +381,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 
 <section class="bw-full-hero">
+  style="--hero-image: url('/assets/img/LAVAconceptart.png');">
   <div class="bw-full-hero-inner">
     <div class="bw-full-hero-content">
       <span class="bw-full-hero-kicker">In vivo awake microscopy · Astrocyte Ca²⁺ · Neurovascular coupling</span>
