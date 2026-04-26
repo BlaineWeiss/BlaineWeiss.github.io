@@ -610,33 +610,6 @@ cover-img: "/assets/img/TESTsupp1.gif"
     </div>  
   </div>
 
-<section class="bw-scroll-hero">
-  <div class="bw-scroll-hero-bg"></div>
-
-  <div class="bw-scroll-hero-content-wrap">
-
-    <div class="bw-scroll-hero-content">
-      <h1>STONE-LAVA</h1>
-
-      <p>
-        A computational framework for spatial and temporal analysis of brain activity,
-        vascular behavior, and multimodal fluorescence imaging datasets.
-      </p>
-
-      <div class="bw-full-hero-actions">
-        <a class="bw-hero-button bw-hero-button-primary"
-           href="/assets/downloads/STONE-LAVA_Installer.exe"
-           download>
-          Get STONE-LAVA
-        </a>
-
-        <a class="bw-hero-button bw-hero-button-secondary"
-           href="https://github.com/BlaineWeiss/STONE-LAVA">
-          Explore STONE-LAVA
-        </a>
-      </div>
-    </div>
-
     <a class="bw-scroll-gallery" href="/software/" aria-label="Open STONE-LAVA gallery">
       <div class="bw-gallery-image-wrap">
         <img class="bw-gallery-slide is-active"
@@ -658,11 +631,6 @@ cover-img: "/assets/img/TESTsupp1.gif"
       </div>
     </a>
 
-  </div>
-</section>
-
-
-  
   </div>
   </div>
 </section>
