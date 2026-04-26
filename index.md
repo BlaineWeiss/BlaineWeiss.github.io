@@ -380,8 +380,8 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 
 
-<section class="bw-full-hero">
-  style="--hero-image: url('/assets/img/LAVAconceptart.png');">
+<section class="bw-full-hero"
+         style="--hero-image: url('/assets/img/LAVAconceptart.png');">
   <div class="bw-full-hero-inner">
     <div class="bw-full-hero-content">
       <span class="bw-full-hero-kicker">In vivo awake microscopy · Astrocyte Ca²⁺ · Neurovascular coupling</span>
