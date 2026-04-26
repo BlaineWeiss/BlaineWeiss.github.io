@@ -393,7 +393,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
       <div class="bw-full-hero-actions">
         <a class="bw-hero-button bw-hero-button-primary" href="/research/">Get STONE-LAVA</a>
-        <a class="bw-hero-button bw-hero-button-secondary" href="[/STONE-LAVA/](https://github.com/BlaineWeiss/STONE-LAVA)">Explore STONE-LAVA</a>
+        <a class="bw-hero-button bw-hero-button-secondary" href="https://github.com/BlaineWeiss/STONE-LAVA">Explore STONE-LAVA</a>
       </div>
     </div>
   </div>
