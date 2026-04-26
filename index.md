@@ -443,7 +443,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 
 
-
+<!--
 <section class="bw-full-hero"
          style="--hero-image: url('/assets/img/LAVAconceptart.png');">
   <div class="bw-full-hero-inner">
@@ -473,8 +473,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     </div>
   </div>
 </section>
-
-
+-->
 
 
 <section class="bw-scroll-hero">
