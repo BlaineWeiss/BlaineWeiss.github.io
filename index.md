@@ -177,7 +177,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   min-height: 940px;
-  position: relative;
+  position: sticky;
   overflow: hidden;
   display: flex;
   align-items: center;
