@@ -181,7 +181,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   overflow: hidden;
   display: flex;
   align-items: center;
-  background: var(--hero-image) /* #111827; */
+  background: #111827;
 }
 
 /* Replace the background-image URL with your wide image/GIF/thumbnail */
