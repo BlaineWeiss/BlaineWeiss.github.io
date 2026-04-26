@@ -177,7 +177,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   min-height: 940px;
-  position: sticky;
+  position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -187,7 +187,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 /* Replace the background-image URL with your wide image/GIF/thumbnail */
 .bw-full-hero::before {
   content: "";
-  position: absolute;
+  position: sticky;
   inset: 0;
   background-image: url("/assets/img/LAVAconceptart.png");
   background-size: cover;
