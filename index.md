@@ -388,12 +388,12 @@ cover-img: "/assets/img/TESTsupp1.gif"
       <h1>STONE-LAVA</h1>
 
       <p>
-        Spatial Temportal Observation of Network Events
+       A computational framework for spatial and temporal analysis of brain activity, vascular behavior, and multimodal fluorescence imaging datasets.
       </p>
 
       <div class="bw-full-hero-actions">
-        <a class="bw-hero-button bw-hero-button-primary" href="/research/">View Research</a>
-        <a class="bw-hero-button bw-hero-button-secondary" href="/STONE-LAVA/">Explore STONE-LAVA</a>
+        <a class="bw-hero-button bw-hero-button-primary" href="/research/">Get STONE-LAVA</a>
+        <a class="bw-hero-button bw-hero-button-secondary" href="[/STONE-LAVA/](https://github.com/BlaineWeiss/STONE-LAVA)">Explore STONE-LAVA</a>
       </div>
     </div>
   </div>
