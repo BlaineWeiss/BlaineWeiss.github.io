@@ -307,9 +307,73 @@ cover-img: "/assets/img/TESTsupp1.gif"
 }
 </style>
 
+<style>
+.bw-scroll-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 
+  position: relative;
+  min-height: 160vh;
+  background: #111827;
+}
 
+/* This is the image layer that hangs still */
+.bw-scroll-hero-bg {
+  position: sticky;
+  top: 0;
+  height: 100vh;
 
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.5) 0%,
+      rgba(15, 23, 42, 0.3) 45%,
+      rgba(15, 23, 42, 0.1) 100%
+    ),
+    url("/assets/img/LAVAconceptart.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
+
+/* This pulls the text over the sticky background */
+.bw-scroll-hero-content-wrap {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1180px;
+  margin: -100vh auto 0;
+  padding: 0 1.5rem;
+
+  min-height: 160vh;
+  display: flex;
+  align-items: center;
+}
+
+.bw-scroll-hero-content {
+  max-width: 680px;
+  padding: 5rem 0;
+}
+
+.bw-scroll-hero-content h1 {
+  margin: 0 0 1rem;
+  color: white;
+  font-size: clamp(2.35rem, 5vw, 4.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.bw-scroll-hero-content p {
+  color: rgba(255,255,255,0.9);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.65;
+  margin: 0 0 1.6rem;
+}
+</style>
 
 
 
@@ -405,11 +469,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
         Explore STONE-LAVA
       </a>
 </div>
-
-
-
-
-      
+  
     </div>
   </div>
 </section>
@@ -417,7 +477,32 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 
 
+<section class="bw-scroll-hero">
+  <div class="bw-scroll-hero-bg"></div>
 
+  <div class="bw-scroll-hero-content-wrap">
+    <div class="bw-scroll-hero-content">
+     <h1>STONE-LAVA</h1>
+
+      <p>
+       A computational framework for spatial and temporal analysis of brain activity, vascular behavior, and multimodal fluorescence imaging datasets.
+      </p>
+
+
+    <div class="bw-full-hero-actions">
+      <a class="bw-hero-button bw-hero-button-primary"
+         href="/assets/downloads/STONE-LAVA_Installer.exe"
+         download>
+        Get STONE-LAVA
+      </a>
+
+      <a class="bw-hero-button bw-hero-button-secondary"
+       href="https://github.com/BlaineWeiss/STONE-LAVA">
+        Explore STONE-LAVA
+      </a>
+    </div>
+  </div>
+</section>
 
 
 
