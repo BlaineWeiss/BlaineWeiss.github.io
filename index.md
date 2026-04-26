@@ -375,6 +375,112 @@ cover-img: "/assets/img/TESTsupp1.gif"
   line-height: 1.65;
   margin: 0 0 1.6rem;
 }
+
+/* Gallery panel */
+.bw-scroll-gallery {
+  width: min(440px, 42vw);
+  min-height: 330px;
+
+  align-self: flex-end;
+  margin-top: 0;
+  margin-bottom: 55vh;
+
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.26);
+  background: rgba(15, 23, 42, 0.62);
+  box-shadow: 0 22px 60px rgba(0,0,0,0.38);
+  backdrop-filter: blur(10px);
+
+  text-decoration: none;
+
+  opacity: 0;
+  transform: translate(90px, -90px) scale(0.94);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.25s ease;
+}
+
+.bw-scroll-gallery.is-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.bw-scroll-gallery:hover {
+  text-decoration: none;
+  box-shadow: 0 28px 75px rgba(0,0,0,0.48);
+  transform: translate(0, -4px) scale(1.01);
+}
+
+.bw-gallery-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #020617;
+}
+
+.bw-gallery-slide {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.7s ease, transform 1.2s ease;
+}
+
+.bw-gallery-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.bw-gallery-caption {
+  padding: 1rem 1.15rem 1.15rem;
+  color: white;
+}
+
+.bw-gallery-caption span {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bw-gallery-caption strong {
+  display: block;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.25;
+}
+
+@media (max-width: 800px) {
+  .bw-scroll-hero {
+    min-height: 280vh;
+  }
+
+  .bw-scroll-hero-content-wrap {
+    min-height: 280vh;
+  }
+
+  .bw-scroll-gallery {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+
+
+  
 </style>
 
 
@@ -501,8 +607,62 @@ cover-img: "/assets/img/TESTsupp1.gif"
        href="https://github.com/BlaineWeiss/STONE-LAVA">
         Explore STONE-LAVA
       </a>
-    </div>
+    </div>  
   </div>
+
+<section class="bw-scroll-hero">
+  <div class="bw-scroll-hero-bg"></div>
+
+  <div class="bw-scroll-hero-content-wrap">
+
+    <div class="bw-scroll-hero-content">
+      <h1>STONE-LAVA</h1>
+
+      <p>
+        A computational framework for spatial and temporal analysis of brain activity,
+        vascular behavior, and multimodal fluorescence imaging datasets.
+      </p>
+
+      <div class="bw-full-hero-actions">
+        <a class="bw-hero-button bw-hero-button-primary"
+           href="/assets/downloads/STONE-LAVA_Installer.exe"
+           download>
+          Get STONE-LAVA
+        </a>
+
+        <a class="bw-hero-button bw-hero-button-secondary"
+           href="https://github.com/BlaineWeiss/STONE-LAVA">
+          Explore STONE-LAVA
+        </a>
+      </div>
+    </div>
+
+    <a class="bw-scroll-gallery" href="/software/" aria-label="Open STONE-LAVA gallery">
+      <div class="bw-gallery-image-wrap">
+        <img class="bw-gallery-slide is-active"
+             src="/assets/img/gallery-1.jpg"
+             alt="STONE-LAVA software preview 1">
+
+        <img class="bw-gallery-slide"
+             src="/assets/img/gallery-2.jpg"
+             alt="STONE-LAVA software preview 2">
+
+        <img class="bw-gallery-slide"
+             src="/assets/img/gallery-3.jpg"
+             alt="STONE-LAVA software preview 3">
+      </div>
+
+      <div class="bw-gallery-caption">
+        <span>Interactive software gallery</span>
+        <strong>View STONE-LAVA workflows</strong>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+  
   </div>
   </div>
 </section>
