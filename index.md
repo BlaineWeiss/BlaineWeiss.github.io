@@ -351,12 +351,14 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
   min-height: 160vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* was center*/
 }
 
 .bw-scroll-hero-content {
   max-width: 680px;
-  padding: 2rem 0;
+  /* padding: 5rem 0; */
+  padding-top: 28vh;
+  padding-bottom: 5rem;
 }
 
 .bw-scroll-hero-content h1 {
