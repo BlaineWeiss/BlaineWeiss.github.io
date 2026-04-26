@@ -176,7 +176,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  min-height: 920px;
+  min-height: 940px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -317,14 +317,15 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 
 <div class="bw-hero">
-  <h1>Hello, I’m Blaine Weiss.</h1>
+  <h1>Welcome!.</h1>
 
   <p>
-    I am a graduate student at the University of Kentucky and a researcher at the Sanders-Brown Center on Aging. My work focuses on <strong>awake intravital fluorescence microscopy</strong>, <strong>mouse models of dementia</strong>, <strong>astrocyte calcium signaling</strong>, <strong>vascular dynamics</strong>, and the development of computational tools for extracting biological meaning from complex imaging datasets.
+    My name is Blaine, I am a graduate student at the University of Kentucky and a researcher at the Sanders-Brown Center on Aging. My work focuses on <strong>awake intravital fluorescence microscopy</strong>, <strong>mouse models of dementia</strong>, <strong>astrocyte calcium signaling</strong>, <strong>vascular dynamics</strong>, and the development of computational tools for extracting biological meaning from complex imaging datasets.
   </p>
 
   <p>
-    My goal is to build analysis systems that make difficult brain imaging experiments more quantitative, reproducible, and visually interpretable.
+    I've built this site to showcase some of my academic accomplishments and as a repository to share my experimental methods and tools used to conduct my research.
+    My goal is to build and make available useful analysis systems that make difficult brain imaging experiments more quantitative, reproducible, and visually interpretable.
   </p>
 
   <div class="bw-badge-row">
