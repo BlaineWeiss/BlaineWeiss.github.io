@@ -399,7 +399,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     once it reaches this point in the viewport.
   */
   position: sticky;
-  top: 10vh;
+  top: 20vh;
 
   border-radius: 24px;
   border: 1px solid rgba(255,255,255,0.26);
@@ -415,11 +415,11 @@ cover-img: "/assets/img/TESTsupp1.gif"
     Starts off to the right.
     JavaScript adds .is-visible, which brings it into place.
   */
-  transform: translateX(860px) scale(0.96);
+  transform: translateX(1000px) scale(0.96);
 
   transition:
-    opacity 2s ease,
-    transform 2s cubic-bezier(.2,.8,.2,1),
+    opacity 5s ease,
+    transform 5s cubic-bezier(.2,.8,.2,1),
     box-shadow 0.5s ease;
 }
 
