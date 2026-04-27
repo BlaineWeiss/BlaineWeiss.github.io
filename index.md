@@ -355,7 +355,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   background-position: center;
   background-repeat: no-repeat;
 
-  transition: opacity 900ms ease;
+  transition: opacity 90ms ease;
 }
 
 .bw-scroll-hero-bg-animation {
