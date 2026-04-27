@@ -145,13 +145,14 @@ full-width: true
   width: 100%;
   height: 100%;
   min-height: 340px;
+  max-height: 500px;
   object-fit: cover;
   display: block;
   transform: scale(1.01);
 }
 
 .bw-feature-media::after {
-  content: "Featured image placeholder";
+  content: "October 1st 2025";
   position: absolute;
   left: 1rem;
   bottom: 1rem;
