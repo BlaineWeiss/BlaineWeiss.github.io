@@ -1,3 +1,5 @@
+<style
+/*
 ---
 layout: page
 title: Publications
@@ -5,7 +7,9 @@ subtitle: Peer-reviewed articles, methods papers, and scientific contributions
 permalink: /publications/
 full-width: true
 ---
-
+ */
+   </style>
+ 
 <style>
 /* Publications page for BlaineWeiss.github.io / Beautiful Jekyll
    Drop this file into the root of your GitHub Pages repository as publications.md.
