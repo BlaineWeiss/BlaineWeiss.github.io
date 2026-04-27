@@ -387,7 +387,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
   transition:
     /* opacity 200ms cubic-bezier(0.4, 0, 0.2, 1), */
-    opacity 1000ms linear
+    opacity 1000ms linear;
     transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
 
   will-change: opacity;
