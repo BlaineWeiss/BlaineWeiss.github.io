@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (shouldAnimate) {
     startAnimation();
-  } else if (progress < 0.15) {
+  } else if (progress < 0.5) {
     resetAnimation();
   }
 }
