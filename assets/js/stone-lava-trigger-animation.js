@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   const hero = document.querySelector(".bw-scroll-hero");
+  const sticky = hero ? hero.querySelector(".bw-scroll-hero-sticky") : null;
   const frames = Array.from(document.querySelectorAll(".bw-anim-frame"));
 
-  if (!hero || frames.length === 0) return;
+  if (!hero || !sticky || frames.length === 0) return;
 
   let activeIndex = 0;
   let intervalId = null;
   let hasStarted = false;
 
-  const frameDuration = 50; // milliseconds per frame
+  const frameDuration = 90;
 
   function setActiveFrame(index) {
     frames.forEach((frame, i) => {
@@ -52,21 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function checkTrigger() {
-    const rect = hero.getBoundingClientRect();
+    const stickyRect = sticky.getBoundingClientRect();
+    const heroRect = hero.getBoundingClientRect();
 
-    /*
-      Trigger when the top of the hero reaches about 25% down from
-      the top of the viewport.
-    */
-    const triggerPoint = window.innerHeight * 0.001;
+    const stickyIsPinned = stickyRect.top <= 1;
+    const heroStillActive = heroRect.bottom > window.innerHeight * 0.25;
 
-    const shouldAnimate =
-      rect.top <= triggerPoint &&
-      rect.bottom > window.innerHeight * 0.1;
-
-    if (shouldAnimate) {
+    if (stickyIsPinned && heroStillActive) {
       startAnimation();
-    } else if (rect.top > triggerPoint) {
+    } else if (stickyRect.top > 1) {
       resetAnimation();
     }
   }
