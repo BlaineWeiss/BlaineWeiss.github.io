@@ -312,11 +312,11 @@ cover-img: "/assets/img/TESTsupp1.gif"
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-
+  margin-top: 5rem;
+  margin-bottom: 5rem;
   position: relative;
   min-height: 160vh;
   background: #111827;
-}
 
 /* This is the image layer that hangs still */
 .bw-scroll-hero-bg {
@@ -358,8 +358,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   width: 100%;
   max-width: none;
 
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  display: flex;
   gap: 3rem;
   align-items: start;
 
