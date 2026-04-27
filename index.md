@@ -388,7 +388,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     Increase this to delay the gallery.
     Decrease this to make it appear sooner.
   */
-  margin-top: 0;
+  margin-top: 20;
   margin-bottom: 10vh;
 
   display: block;
