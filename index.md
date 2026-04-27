@@ -399,7 +399,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     once it reaches this point in the viewport.
   */
   position: sticky;
-  top: 16vh;
+  top: 1vh;
 
   border-radius: 24px;
   border: 1px solid rgba(255,255,255,0.26);
