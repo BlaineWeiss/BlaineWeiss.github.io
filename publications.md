@@ -136,6 +136,7 @@ full-width: true
   position: relative;
   overflow: hidden;
   min-height: 340px;
+   max-height: 600px;
   border-radius: 22px;
   background: #020617;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), 0 16px 40px rgba(15,23,42,0.22);
@@ -145,7 +146,7 @@ full-width: true
   width: 100%;
   height: 100%;
   min-height: 340px;
-  max-height: 500px;
+  max-height: 600px;
   object-fit: contain;
   display: block;
   transform: scale(1.01);
