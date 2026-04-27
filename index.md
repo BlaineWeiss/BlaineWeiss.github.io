@@ -471,7 +471,11 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
   .bw-scroll-hero-content-wrap {
     grid-template-columns: 1fr;
-    align-items: center;
+    align-items: start;
+    align-content: start;
+
+    padding-top: 18vh;
+    padding-bottom: 2rem;
   }
 
   .bw-scroll-gallery {
