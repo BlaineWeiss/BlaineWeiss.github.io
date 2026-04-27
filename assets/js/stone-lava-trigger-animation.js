@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const shouldAnimate =
       rect.top <= triggerPoint &&
-      rect.bottom > window.innerHeight * 0.45;
+      rect.bottom > window.innerHeight * 1.5;
 
     if (shouldAnimate) {
       startAnimation();
