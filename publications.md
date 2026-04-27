@@ -158,7 +158,7 @@ full-width: true
 }
 
 .bw-feature-media::after {
-  content: "October 1st 2025";
+  content: "Featured Cover Art";
   position: absolute;
   left: 1rem;
   bottom: 1rem;
