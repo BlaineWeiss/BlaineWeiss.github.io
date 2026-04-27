@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
       Trigger when the top of the hero reaches about 25% down from
       the top of the viewport.
     */
-    const triggerPoint = window.innerHeight * 0.01;
+    const triggerPoint = window.innerHeight * 0.001;
 
     const shouldAnimate =
       rect.top <= triggerPoint &&
-      rect.bottom > window.innerHeight * 0.01;
+      rect.bottom > window.innerHeight * 0.1;
 
     if (shouldAnimate) {
       startAnimation();
