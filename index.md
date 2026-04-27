@@ -624,11 +624,9 @@ cover-img: "/assets/img/TESTsupp1.gif"
        href="https://github.com/BlaineWeiss/STONE-LAVA">
         Explore STONE-LAVA
       </a>
-    </div>  
-  </div>
-  </div>
+    </div> 
 
-    <a class="bw-scroll-gallery" href="/software/" aria-label="Open STONE-LAVA gallery">
+      <a class="bw-scroll-gallery" href="/software/" aria-label="Open STONE-LAVA gallery">
       <div class="bw-gallery-image-wrap">
         <img class="bw-gallery-slide is-active"
              src="/assets/img/gallery-1.jpg"
@@ -649,6 +647,10 @@ cover-img: "/assets/img/TESTsupp1.gif"
       </div>
     </a>
 
+  </div>
+  </div>
+
+  
   </div>
 </section>
 <script src="/assets/js/stone-lava-gallery.js"></script>
