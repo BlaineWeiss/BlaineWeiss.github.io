@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let intervalId = null;
   let hasStarted = false;
 
-  const frameDuration =  500;
+  const frameDuration =  400;
 
  function setActiveFrame(nextIndex) {
   if (nextIndex === activeIndex) return;
