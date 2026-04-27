@@ -389,7 +389,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     Decrease this to make it appear sooner.
   */
   margin-top: 0;
-  margin-bottom: 90vh;
+  margin-bottom: 10vh;
 
   display: block;
   overflow: hidden;
