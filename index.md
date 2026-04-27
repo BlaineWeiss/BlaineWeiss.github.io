@@ -383,28 +383,18 @@ cover-img: "/assets/img/TESTsupp1.gif"
   opacity: 0;
   z-index: 0;
 
-  transform: scale(1);
-
-  transition:
-    /* opacity 200ms cubic-bezier(0.4, 0, 0.2, 1), */
-    opacity 1000ms linear;
-    transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
-
+  transition: opacity 1000ms linear;
   will-change: opacity;
 }
 
-/* The currently visible frame stays fully visible underneath */
 .bw-anim-frame.is-current {
   opacity: 1;
   z-index: 1;
-  transform: scale(1);
 }
 
-/* The incoming frame fades in above the current one */
 .bw-anim-frame.is-entering {
   opacity: 1;
   z-index: 2;
-  transform: scale(1);
 }
   
   .bw-scroll-hero-content-wrap {
