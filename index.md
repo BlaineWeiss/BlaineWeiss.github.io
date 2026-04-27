@@ -390,7 +390,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     opacity 1000ms linear
     transform 1000ms cubic-bezier(0.22, 1, 0.36, 1);
 
-  will-change: opacity, transform;
+  will-change: opacity;
 }
 
 /* The currently visible frame stays fully visible underneath */
