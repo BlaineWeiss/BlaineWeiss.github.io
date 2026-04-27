@@ -312,24 +312,32 @@ cover-img: "/assets/img/TESTsupp1.gif"
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+
   margin-top: 5rem;
   margin-bottom: 5rem;
-  position: relative;
-  min-height: 160vh;
-  background: #111827;
 
-/* This is the image layer that hangs still */
-.bw-scroll-hero-bg {
+  position: relative;
+  min-height: 180vh;
+  background: #111827;
+}
+
+.bw-scroll-hero-sticky {
   position: sticky;
   top: 0;
   height: 100vh;
+  overflow: hidden;
+}
+
+.bw-scroll-hero-bg {
+  position: absolute;
+  inset: 0;
 
   background-image:
     linear-gradient(
       90deg,
-      rgba(15, 23, 42, 0.5) 0%,
-      rgba(15, 23, 42, 0.3) 45%,
-      rgba(15, 23, 42, 0.1) 100%
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(15, 23, 42, 0.35) 45%,
+      rgba(15, 23, 42, 0.12) 100%
     ),
     url("/assets/img/LAVAconceptart.png");
 
@@ -340,71 +348,47 @@ cover-img: "/assets/img/TESTsupp1.gif"
   z-index: 0;
 }
 
-/* This pulls the text over the sticky background */
 .bw-scroll-hero-content-wrap {
   position: relative;
   z-index: 2;
 
-  max-width: 1180px;
-  margin: -100vh auto 0;
-  padding: 0 1.5rem;
+  width: min(1180px, calc(100% - 3rem));
+  height: 100%;
+  margin: 0 auto;
 
-  min-height: 160vh;
-  display: flex;
-  align-items: flex-start; /* was center*/
-}
-
-.bw-scroll-hero-content {
-  width: 100%;
-  max-width: none;
-
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
   gap: 3rem;
-  align-items: start;
-
-  padding-top: 20vh;
-  padding-bottom: 5rem;
+  align-items: center;
 }
 
-.bw-scroll-hero-content h1 {
+.bw-scroll-hero-text {
+  max-width: 680px;
+}
+
+.bw-scroll-hero-text h1 {
   margin: 0 0 1rem;
   color: white;
-  font-size: clamp(2.35rem, 5vw, 4.75rem);
-  line-height: 1.02;
+  font-size: clamp(2.75rem, 6vw, 5.75rem);
+  line-height: 0.95;
   letter-spacing: -0.045em;
 }
 
-.bw-scroll-hero-content p {
+.bw-scroll-hero-text p {
   color: rgba(255,255,255,0.9);
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   line-height: 1.65;
   margin: 0 0 1.6rem;
 }
 
-/* Gallery panel */
 .bw-scroll-gallery {
   width: min(460px, 42vw);
   min-height: 330px;
 
-  align-self: flex-end;
-
-  /*
-    This makes it appear later in the scroll sequence.
-    Increase this to delay the gallery.
-    Decrease this to make it appear sooner.
-  */
-  margin-top: 20vh;
-  margin-bottom: 10vh;
+  justify-self: end;
 
   display: block;
   overflow: hidden;
-
-  /*
-    This makes the gallery stop and stay still
-    once it reaches this point in the viewport.
-  */
-  position: sticky;
-  top: 20vh;
 
   border-radius: 24px;
   border: 1px solid rgba(255,255,255,0.26);
@@ -415,16 +399,11 @@ cover-img: "/assets/img/TESTsupp1.gif"
   text-decoration: none;
 
   opacity: 0;
-
-  /*
-    Starts off to the right.
-    JavaScript adds .is-visible, which brings it into place.
-  */
-  transform: translateX(1000px) scale(0.96);
+  transform: translateX(220px) scale(0.96);
 
   transition:
-    opacity 5s ease,
-    transform 5s cubic-bezier(.2,.8,.2,1),
+    opacity 1.2s ease,
+    transform 1.2s cubic-bezier(.2,.8,.2,1),
     box-shadow 0.5s ease;
 }
 
@@ -607,55 +586,53 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 
 <section class="bw-scroll-hero">
-  <div class="bw-scroll-hero-bg">
+  <div class="bw-scroll-hero-sticky">
+    <div class="bw-scroll-hero-bg"></div>
 
-  <div class="bw-scroll-hero-content-wrap">
-    <div class="bw-scroll-hero-content">
-     <h1>STONE-LAVA</h1>
+    <div class="bw-scroll-hero-content-wrap">
+      <div class="bw-scroll-hero-text">
+        <h1>STONE-LAVA</h1>
 
-      <p>
-       A computational framework for spatial and temporal analysis of brain activity, vascular behavior, and multimodal fluorescence imaging datasets.
-      </p>
+        <p>
+          A computational framework for spatial and temporal analysis of brain activity,
+          vascular behavior, and multimodal fluorescence imaging datasets.
+        </p>
 
+        <div class="bw-full-hero-actions">
+          <a class="bw-hero-button bw-hero-button-primary"
+             href="/assets/downloads/STONE-LAVA_Installer.exe"
+             download>
+            Get STONE-LAVA
+          </a>
 
-    <div class="bw-full-hero-actions">
-      <a class="bw-hero-button bw-hero-button-primary"
-         href="/assets/downloads/STONE-LAVA_Installer.exe"
-         download>
-        Get STONE-LAVA
-      </a>
-
-      <a class="bw-hero-button bw-hero-button-secondary"
-       href="https://github.com/BlaineWeiss/STONE-LAVA">
-        Explore STONE-LAVA
-      </a>
-    </div> 
+          <a class="bw-hero-button bw-hero-button-secondary"
+             href="https://github.com/BlaineWeiss/STONE-LAVA">
+            Explore STONE-LAVA
+          </a>
+        </div>
+      </div>
 
       <a class="bw-scroll-gallery" href="/software/" aria-label="Open STONE-LAVA gallery">
-      <div class="bw-gallery-image-wrap">
-        <img class="bw-gallery-slide is-active"
-             src="/assets/img/gallery-1.jpg"
-             alt="STONE-LAVA software preview 1">
+        <div class="bw-gallery-image-wrap">
+          <img class="bw-gallery-slide is-active"
+               src="/assets/img/gallery-1.jpg"
+               alt="STONE-LAVA software preview 1">
 
-        <img class="bw-gallery-slide"
-             src="/assets/img/gallery-2.jpg"
-             alt="STONE-LAVA software preview 2">
+          <img class="bw-gallery-slide"
+               src="/assets/img/gallery-2.jpg"
+               alt="STONE-LAVA software preview 2">
 
-        <img class="bw-gallery-slide"
-             src="/assets/img/gallery-3.jpg"
-             alt="STONE-LAVA software preview 3">
-      </div>
+          <img class="bw-gallery-slide"
+               src="/assets/img/gallery-3.jpg"
+               alt="STONE-LAVA software preview 3">
+        </div>
 
-      <div class="bw-gallery-caption">
-        <span>Interactive software gallery</span>
-        <strong>View STONE-LAVA workflows</strong>
-      </div>
-    </a>
-
-  </div>
-  </div>
-
-  
+        <div class="bw-gallery-caption">
+          <span>Interactive software gallery</span>
+          <strong>View STONE-LAVA workflows</strong>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 <script src="/assets/js/stone-lava-gallery.js"></script>
