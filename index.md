@@ -384,7 +384,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   transform: scale(1.0);
 
   transition:
-    opacity 7000ms ease,
+    opacity 7000ms ease-out,
     transform 4000ms ease;
 
   will-change: opacity, transform;
