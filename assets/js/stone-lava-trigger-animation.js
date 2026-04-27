@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let intervalId = null;
   let hasStarted = false;
 
-  const frameDuration = 30;
+  const frameDuration = 90;
 
   function setActiveFrame(index) {
     frames.forEach((frame, i) => {
