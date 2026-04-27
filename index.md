@@ -381,11 +381,11 @@ cover-img: "/assets/img/TESTsupp1.gif"
   object-position: center;
 
   opacity: 0;
-  transform: scale(1.015);
+  transform: scale(1.0);
 
   transition:
-    opacity 900ms ease,
-    transform 1400ms ease;
+    opacity 90ms ease,
+    transform 400ms ease;
 
   will-change: opacity, transform;
 }
