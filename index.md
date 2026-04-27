@@ -466,19 +466,25 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 @media (max-width: 800px) {
   .bw-scroll-hero {
-    min-height: 280vh;
+    min-height: 190vh;
   }
 
   .bw-scroll-hero-content-wrap {
-    min-height: 280vh;
+    grid-template-columns: 1fr;
+    align-items: center;
   }
 
   .bw-scroll-gallery {
     width: 100%;
-    align-self: center;
+    max-width: 460px;
+    justify-self: start;
+    transform: translateY(80px) scale(0.96);
+  }
+
+  .bw-scroll-gallery.is-visible {
+    transform: translateY(0) scale(1);
   }
 }
-
 
 
   
