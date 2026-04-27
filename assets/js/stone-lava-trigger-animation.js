@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nextFrame.classList.add("is-current");
 
     activeIndex = nextIndex;
-  }, 1200);
+  }, 200);
 }
 
   function startAnimation() {
