@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   const shouldAnimate =
-    progress >= 0.15 &&
+    progress >= 0.5 &&
     rect.bottom > window.innerHeight * 0.25;
 
   if (shouldAnimate) {
