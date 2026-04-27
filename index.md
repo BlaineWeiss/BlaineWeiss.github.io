@@ -355,8 +355,14 @@ cover-img: "/assets/img/TESTsupp1.gif"
 }
 
 .bw-scroll-hero-content {
-  max-width: 680px;
-  /* padding: 5rem 0; */
+  width: 100%;
+  max-width: none;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  gap: 3rem;
+  align-items: start;
+
   padding-top: 20vh;
   padding-bottom: 5rem;
 }
@@ -388,7 +394,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     Increase this to delay the gallery.
     Decrease this to make it appear sooner.
   */
-  margin-top: 20;
+  margin-top: 20vh;
   margin-bottom: 10vh;
 
   display: block;
