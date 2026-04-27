@@ -8,29 +8,92 @@ document.addEventListener("DOMContentLoaded", function () {
   let activeIndex = 0;
   let intervalId = null;
   let hasStarted = false;
-
-  const frameDuration =  101;
-
- function setActiveFrame(nextIndex) {
-  if (nextIndex === activeIndex) return;
-
-  const currentFrame = frames[activeIndex];
-  const nextFrame = frames[nextIndex];
+  let isTransitioning = false;
+  let transitionTimeoutId = null;
 
   /*
-    Put the next frame above the current frame and fade it in.
-    The old frame remains fully visible underneath, preventing a dark flash.
+    Must match your CSS opacity transition duration:
+    transition: opacity 1000ms linear;
   */
-  nextFrame.classList.add("is-entering");
+  const fadeDuration = 1000;
 
-  window.setTimeout(function () {
-    currentFrame.classList.remove("is-current");
-    nextFrame.classList.remove("is-entering");
-    nextFrame.classList.add("is-current");
+  /*
+    Time between the start of one frame transition and the next.
+    This MUST be longer than fadeDuration.
+  */
+  const frameDuration = 2200;
 
-    activeIndex = nextIndex;
-  }, 100);
-}
+  /*
+    Animation starts when the user has scrolled this far into
+    the scroll hero section.
+
+    Higher = starts later.
+    Lower = starts earlier.
+  */
+  const triggerProgress = 0.5;
+
+  function resetFrameStack() {
+    frames.forEach(function (frame, i) {
+      frame.classList.remove("is-current", "is-entering");
+      frame.style.zIndex = "0";
+
+      if (i === 0) {
+        frame.classList.add("is-current");
+        frame.style.zIndex = "1";
+      }
+    });
+
+    activeIndex = 0;
+    isTransitioning = false;
+  }
+
+  function setActiveFrame(nextIndex) {
+    if (nextIndex === activeIndex) return;
+    if (isTransitioning) return;
+    if (nextIndex < 0 || nextIndex >= frames.length) return;
+
+    isTransitioning = true;
+
+    const currentFrame = frames[activeIndex];
+    const nextFrame = frames[nextIndex];
+
+    /*
+      Clear any old entering states, but do NOT remove is-current
+      from the current frame yet. The current frame must remain visible
+      underneath the new one during the fade.
+    */
+    frames.forEach(function (frame) {
+      frame.classList.remove("is-entering");
+      frame.style.zIndex = "0";
+    });
+
+    currentFrame.classList.add("is-current");
+    currentFrame.style.zIndex = "1";
+
+    /*
+      Put the new frame above the current one. Its CSS opacity transition
+      will fade it from 0 to 1.
+    */
+    nextFrame.classList.add("is-entering");
+    nextFrame.style.zIndex = "2";
+
+    if (transitionTimeoutId) {
+      window.clearTimeout(transitionTimeoutId);
+    }
+
+    transitionTimeoutId = window.setTimeout(function () {
+      currentFrame.classList.remove("is-current");
+      currentFrame.style.zIndex = "0";
+
+      nextFrame.classList.remove("is-entering");
+      nextFrame.classList.add("is-current");
+      nextFrame.style.zIndex = "1";
+
+      activeIndex = nextIndex;
+      isTransitioning = false;
+      transitionTimeoutId = null;
+    }, fadeDuration);
+  }
 
   function startAnimation() {
     if (hasStarted) return;
@@ -38,9 +101,11 @@ document.addEventListener("DOMContentLoaded", function () {
     hasStarted = true;
     hero.classList.add("is-animating");
 
-    setActiveFrame(0);
+    resetFrameStack();
 
     intervalId = window.setInterval(function () {
+      if (isTransitioning) return;
+
       const nextIndex = activeIndex + 1;
 
       if (nextIndex >= frames.length) {
@@ -53,49 +118,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }, frameDuration);
   }
 
- function resetAnimation() {
-  hasStarted = false;
-  hero.classList.remove("is-animating");
+  function resetAnimation() {
+    hasStarted = false;
+    hero.classList.remove("is-animating");
 
-  if (intervalId) {
-    window.clearInterval(intervalId);
-    intervalId = null;
-  }
-
-  frames.forEach((frame, i) => {
-    frame.classList.remove("is-current", "is-entering");
-    if (i === 0) {
-      frame.classList.add("is-current");
+    if (intervalId) {
+      window.clearInterval(intervalId);
+      intervalId = null;
     }
-  });
 
-  activeIndex = 0;
-}
+    if (transitionTimeoutId) {
+      window.clearTimeout(transitionTimeoutId);
+      transitionTimeoutId = null;
+    }
 
- function checkTrigger() {
-  const rect = hero.getBoundingClientRect();
-  const scrollableDistance = rect.height - window.innerHeight;
-
-  if (scrollableDistance <= 0) return;
-
-  const progress = Math.min(
-    Math.max(-rect.top / scrollableDistance, 0),
-    1
-  );
-
-  const shouldAnimate =
-    progress >= 0.5 &&
-    rect.bottom > window.innerHeight * 0.25;
-
-  if (shouldAnimate) {
-    startAnimation();
-  } else if (progress < 0.5) {
-    resetAnimation();
+    resetFrameStack();
   }
-}
+
+  function checkTrigger() {
+    const rect = hero.getBoundingClientRect();
+    const scrollableDistance = rect.height - window.innerHeight;
+
+    if (scrollableDistance <= 0) return;
+
+    const progress = Math.min(
+      Math.max(-rect.top / scrollableDistance, 0),
+      1
+    );
+
+    const heroStillActive = rect.bottom > window.innerHeight * 0.25;
+
+    if (progress >= triggerProgress && heroStillActive) {
+      startAnimation();
+    } else if (progress < triggerProgress) {
+      resetAnimation();
+    }
+  }
 
   window.addEventListener("scroll", checkTrigger, { passive: true });
   window.addEventListener("resize", checkTrigger);
 
+  resetFrameStack();
   checkTrigger();
 });
