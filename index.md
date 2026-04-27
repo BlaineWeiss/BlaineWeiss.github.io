@@ -381,20 +381,31 @@ cover-img: "/assets/img/TESTsupp1.gif"
   object-position: center;
 
   opacity: 0;
-  transform: scale(1.0);
+  z-index: 0;
+
+  transform: scale(1.01);
 
   transition:
-    opacity 7000ms ease-out,
-    transform 4000ms ease;
+    opacity 1200ms cubic-bezier(0.45, 0, 0.15, 1),
+    transform 1800ms cubic-bezier(0.22, 1, 0.36, 1);
 
   will-change: opacity, transform;
 }
 
-.bw-anim-frame.is-active {
+/* The currently visible frame stays fully visible underneath */
+.bw-anim-frame.is-current {
   opacity: 1;
+  z-index: 1;
   transform: scale(1);
 }
 
+/* The incoming frame fades in above the current one */
+.bw-anim-frame.is-entering {
+  opacity: 1;
+  z-index: 2;
+  transform: scale(1);
+}
+  
   .bw-scroll-hero-content-wrap {
   position: relative;
   z-index: 2;
@@ -575,7 +586,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div>
 
     <div class="bw-scroll-hero-bg-animation" aria-hidden="true">
-      <img class="bw-anim-frame is-active" src="/assets/img/stone-lava-anim/frame-00.png" alt="">
+      <img class="bw-anim-frame is-current" src="/assets/img/stone-lava-anim/frame-00.png" alt="">
       <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-01.png" alt="">
       <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-02.png" alt="">
       <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-03.png" alt="">
