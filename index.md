@@ -434,7 +434,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
   opacity: 0;
   transform: scale(1.04);
-  transition: opacity 0.7s ease, transform 1.2s ease;
+  transition: opacity 2.7s ease, transform 1.2s ease;
 }
 
 .bw-gallery-slide.is-active {
