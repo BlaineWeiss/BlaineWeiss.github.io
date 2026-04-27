@@ -418,9 +418,9 @@ cover-img: "/assets/img/TESTsupp1.gif"
   transform: translateX(860px) scale(0.96);
 
   transition:
-    opacity 0.75s ease,
-    transform 0.75s cubic-bezier(.2,.8,.2,1),
-    box-shadow 0.25s ease;
+    opacity 2s ease,
+    transform 2s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.5s ease;
 }
 
 .bw-scroll-gallery.is-visible {
