@@ -454,7 +454,7 @@ full-width: true
 
   <section class="bw-feature" id="featured-publication">
     <div class="bw-feature-media">
-      <img src="/assets/img/jneuro_45_40_cover" alt="October 1st, 2025">
+      <img src="/assets/img/jneuro_45_40_cover.png" alt="October 1st, 2025">
     </div>
 
     <div class="bw-feature-copy">
@@ -616,9 +616,7 @@ full-width: true
   </section>
 
   <p class="bw-note">
-    Image note: upload your feature image to <code>/assets/img/</code> and replace
-    <code>/assets/img/featured-publication-placeholder.jpg</code> with the final filename. A cover image, two-photon field,
-    or STONE-LAVA output would work especially well here.
+
   </p>
 </div>
 
