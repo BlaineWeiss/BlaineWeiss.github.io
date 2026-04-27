@@ -632,7 +632,6 @@ cover-img: "/assets/img/TESTsupp1.gif"
     </a>
 
   </div>
-  </div>
 </section>
 <script src="/assets/js/stone-lava-gallery.js"></script>
 
