@@ -1,14 +1,9 @@
-<style>
-/*
 ---
 layout: page
-title: Publications
-subtitle: Peer-reviewed articles, methods papers, and scientific contributions
 permalink: /publications/
 full-width: true
 ---
- */
-   </style>
+
  
 <style>
 /* Publications page for BlaineWeiss.github.io / Beautiful Jekyll
