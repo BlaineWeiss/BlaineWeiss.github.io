@@ -318,7 +318,8 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
   position: relative;
   min-height: 180vh;
-  background: #111827;
+
+  background: #020617;
 }
 
 .bw-scroll-hero-sticky {
@@ -326,11 +327,20 @@ cover-img: "/assets/img/TESTsupp1.gif"
   top: 0;
   height: 100vh;
   overflow: hidden;
+  background: #020617;
 }
 
-.bw-scroll-hero-bg {
+.bw-scroll-hero-bg-original,
+.bw-scroll-hero-bg-animation {
   position: absolute;
   inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #020617;
+}
+
+.bw-scroll-hero-bg-original {
+  opacity: 1;
 
   background-image:
     linear-gradient(
@@ -345,10 +355,47 @@ cover-img: "/assets/img/TESTsupp1.gif"
   background-position: center;
   background-repeat: no-repeat;
 
-  z-index: 0;
+  transition: opacity 900ms ease;
 }
 
-.bw-scroll-hero-content-wrap {
+.bw-scroll-hero-bg-animation {
+  opacity: 0;
+  transition: opacity 900ms ease;
+}
+
+.bw-scroll-hero.is-animating .bw-scroll-hero-bg-original {
+  opacity: 0;
+}
+
+.bw-scroll-hero.is-animating .bw-scroll-hero-bg-animation {
+  opacity: 1;
+}
+
+.bw-anim-frame {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  opacity: 0;
+  transform: scale(1.015);
+
+  transition:
+    opacity 900ms ease,
+    transform 1400ms ease;
+
+  will-change: opacity, transform;
+}
+
+.bw-anim-frame.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+  .bw-scroll-hero-content-wrap {
   position: relative;
   z-index: 2;
 
@@ -357,13 +404,13 @@ cover-img: "/assets/img/TESTsupp1.gif"
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
   gap: 3rem;
   align-items: center;
 }
 
 .bw-scroll-hero-text {
-  max-width: 680px;
+  max-width: 620px;
 }
 
 .bw-scroll-hero-text h1 {
@@ -381,92 +428,19 @@ cover-img: "/assets/img/TESTsupp1.gif"
   margin: 0 0 1.6rem;
 }
 
-.bw-scroll-gallery {
-  width: min(460px, 42vw);
-  min-height: 330px;
-
-  justify-self: end;
-
-  display: block;
-  overflow: hidden;
-
-  border-radius: 24px;
-  border: 1px solid rgba(255,255,255,0.26);
-  background: rgba(15, 23, 42, 0.62);
-  box-shadow: 0 22px 60px rgba(0,0,0,0.38);
-  backdrop-filter: blur(10px);
-
-  text-decoration: none;
-
-  opacity: 0;
-  transform: translateX(220px) scale(0.96);
-
-  transition:
-    opacity 1.2s ease,
-    transform 1.2s cubic-bezier(.2,.8,.2,1),
-    box-shadow 0.5s ease;
+.bw-hero-description {
+  margin-top: 1.2rem !important;
+  max-width: 560px;
+  color: rgba(255,255,255,0.76) !important;
+  font-size: 1rem !important;
 }
 
-.bw-scroll-gallery.is-visible {
-  opacity: 1;
-  transform: translateX(0) scale(1);
-}
-
-.bw-scroll-gallery:hover {
-  text-decoration: none;
-  box-shadow: 0 28px 75px rgba(0,0,0,0.48);
-}
-
-.bw-gallery-image-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: #020617;
-}
-
-.bw-gallery-slide {
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  opacity: 0;
-  transform: scale(1.04);
-  transition: opacity 2.7s ease, transform 1.2s ease;
-}
-
-.bw-gallery-slide.is-active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.bw-gallery-caption {
-  padding: 1rem 1.15rem 1.15rem;
-  color: white;
-}
-
-.bw-gallery-caption span {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: rgba(255,255,255,0.72);
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.bw-gallery-caption strong {
-  display: block;
-  color: white;
-  font-size: 1.1rem;
-  line-height: 1.25;
-}
+  
+  
 
 @media (max-width: 800px) {
   .bw-scroll-hero {
-    min-height: 190vh;
+    min-height: 170vh;
   }
 
   .bw-scroll-hero-content-wrap {
@@ -478,18 +452,18 @@ cover-img: "/assets/img/TESTsupp1.gif"
     padding-bottom: 2rem;
   }
 
-  .bw-scroll-gallery {
-    width: 100%;
-    max-width: 460px;
-    justify-self: start;
-    transform: translateY(80px) scale(0.96);
+  .bw-scroll-hero-text {
+    max-width: 100%;
   }
 
-  .bw-scroll-gallery.is-visible {
-    transform: translateY(0) scale(1);
+  .bw-scroll-hero-bg-original {
+    background-position: center right;
+  }
+
+  .bw-anim-frame {
+    object-position: center right;
   }
 }
-
 
   
 </style>
@@ -597,7 +571,19 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 <section class="bw-scroll-hero">
   <div class="bw-scroll-hero-sticky">
-    <div class="bw-scroll-hero-bg"></div>
+
+    <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div>
+
+    <div class="bw-scroll-hero-bg-animation" aria-hidden="true">
+      <img class="bw-anim-frame is-active" src="/assets/img/stone-lava-anim/frame-00.png" alt="">
+      <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-01.png" alt="">
+      <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-02.png" alt="">
+      <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-03.png" alt="">
+      <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-04.png" alt="">
+      <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-05.png" alt="">
+      <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-06.png" alt="">
+      <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-07.png" alt="">
+    </div>
 
     <div class="bw-scroll-hero-content-wrap">
       <div class="bw-scroll-hero-text">
@@ -620,29 +606,13 @@ cover-img: "/assets/img/TESTsupp1.gif"
             Explore STONE-LAVA
           </a>
         </div>
+
+        <p class="bw-hero-description">
+          Analyze cellular activity, vascular dynamics, and network-level signaling from complex awake fluorescence imaging datasets.
+        </p>
       </div>
-
-      <a class="bw-scroll-gallery" href="/software/" aria-label="Open STONE-LAVA gallery">
-        <div class="bw-gallery-image-wrap">
-          <img class="bw-gallery-slide is-active"
-               src="/assets/img/gallery-1.jpg"
-               alt="STONE-LAVA software preview 1">
-
-          <img class="bw-gallery-slide"
-               src="/assets/img/gallery-2.jpg"
-               alt="STONE-LAVA software preview 2">
-
-          <img class="bw-gallery-slide"
-               src="/assets/img/gallery-3.jpg"
-               alt="STONE-LAVA software preview 3">
-        </div>
-
-        <div class="bw-gallery-caption">
-          <span>Interactive software gallery</span>
-          <strong>View STONE-LAVA workflows</strong>
-        </div>
-      </a>
     </div>
+
   </div>
 </section>
 <script src="/assets/js/stone-lava-gallery.js"></script>
