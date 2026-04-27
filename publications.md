@@ -454,7 +454,7 @@ full-width: true
 
   <section class="bw-feature" id="featured-publication">
     <div class="bw-feature-media">
-      <img src="/assets/img/featured-publication-placeholder.jpg" alt="Featured publication image placeholder">
+      <img src="/assets/img/jneuro_45_40_cover" alt="October 1st, 2025">
     </div>
 
     <div class="bw-feature-copy">
