@@ -137,7 +137,7 @@ full-width: true
   overflow: hidden;
   min-height: 340px;
    max-height: 600px;
-   max-width: 400px
+   max-width: 200px
   border-radius: 22px;
   background: #020617;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), 0 16px 40px rgba(15,23,42,0.22);
