@@ -383,7 +383,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   opacity: 0;
   z-index: 0;
 
-  transition: opacity 1000ms linear;
+  transition: opacity 500ms linear;
   will-change: opacity;
 }
 
