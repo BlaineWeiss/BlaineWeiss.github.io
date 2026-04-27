@@ -317,7 +317,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   margin-bottom: 5rem;
 
   position: relative;
-  min-height: 180vh;
+  min-height: 400vh;
 
   background: #020617;
 }
