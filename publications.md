@@ -146,7 +146,7 @@ full-width: true
   height: 100%;
   min-height: 340px;
   max-height: 500px;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transform: scale(1.01);
 }
