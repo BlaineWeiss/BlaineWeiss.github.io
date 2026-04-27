@@ -11,13 +11,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const frameDuration = 2000;
 
-  function setActiveFrame(index) {
-    frames.forEach((frame, i) => {
-      frame.classList.toggle("is-active", i === index);
-    });
+ function setActiveFrame(nextIndex) {
+  if (nextIndex === activeIndex) return;
 
-    activeIndex = index;
-  }
+  const currentFrame = frames[activeIndex];
+  const nextFrame = frames[nextIndex];
+
+  /*
+    Put the next frame above the current frame and fade it in.
+    The old frame remains fully visible underneath, preventing a dark flash.
+  */
+  nextFrame.classList.add("is-entering");
+
+  window.setTimeout(function () {
+    currentFrame.classList.remove("is-current");
+    nextFrame.classList.remove("is-entering");
+    nextFrame.classList.add("is-current");
+
+    activeIndex = nextIndex;
+  }, 1200);
+}
 
   function startAnimation() {
     if (hasStarted) return;
@@ -40,17 +53,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }, frameDuration);
   }
 
-  function resetAnimation() {
-    hasStarted = false;
-    hero.classList.remove("is-animating");
+ function resetAnimation() {
+  hasStarted = false;
+  hero.classList.remove("is-animating");
 
-    if (intervalId) {
-      window.clearInterval(intervalId);
-      intervalId = null;
-    }
-
-    setActiveFrame(0);
+  if (intervalId) {
+    window.clearInterval(intervalId);
+    intervalId = null;
   }
+
+  frames.forEach((frame, i) => {
+    frame.classList.remove("is-current", "is-entering");
+    if (i === 0) {
+      frame.classList.add("is-current");
+    }
+  });
+
+  activeIndex = 0;
+}
 
  function checkTrigger() {
   const rect = hero.getBoundingClientRect();
