@@ -383,10 +383,10 @@ cover-img: "/assets/img/TESTsupp1.gif"
   opacity: 0;
   z-index: 0;
 
-  transform: scale(1.01);
+  transform: scale(1);
 
   transition:
-    opacity 1200ms cubic-bezier(0.45, 0, 0.15, 1),
+    opacity 200ms cubic-bezier(0.45, 0, 0.15, 1),
     transform 0ms cubic-bezier(0.22, 1, 0.36, 1);
 
   will-change: opacity, transform;
