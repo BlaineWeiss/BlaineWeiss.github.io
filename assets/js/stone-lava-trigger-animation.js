@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let intervalId = null;
   let hasStarted = false;
 
-  const frameDuration = 90;
+  const frameDuration = 180;
 
   function setActiveFrame(index) {
     frames.forEach((frame, i) => {
@@ -52,19 +52,27 @@ document.addEventListener("DOMContentLoaded", function () {
     setActiveFrame(0);
   }
 
-  function checkTrigger() {
-    const stickyRect = sticky.getBoundingClientRect();
-    const heroRect = hero.getBoundingClientRect();
+ function checkTrigger() {
+  const rect = hero.getBoundingClientRect();
+  const scrollableDistance = rect.height - window.innerHeight;
 
-    const stickyIsPinned = stickyRect.top <= 1;
-    const heroStillActive = heroRect.bottom > window.innerHeight * 0.25;
+  if (scrollableDistance <= 0) return;
 
-    if (stickyIsPinned && heroStillActive) {
-      startAnimation();
-    } else if (stickyRect.top > 1) {
-      resetAnimation();
-    }
+  const progress = Math.min(
+    Math.max(-rect.top / scrollableDistance, 0),
+    1
+  );
+
+  const shouldAnimate =
+    progress >= 0.15 &&
+    rect.bottom > window.innerHeight * 0.25;
+
+  if (shouldAnimate) {
+    startAnimation();
+  } else if (progress < 0.15) {
+    resetAnimation();
   }
+}
 
   window.addEventListener("scroll", checkTrigger, { passive: true });
   window.addEventListener("resize", checkTrigger);
