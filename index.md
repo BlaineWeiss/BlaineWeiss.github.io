@@ -360,7 +360,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 .bw-scroll-hero-bg-animation {
   opacity: 0;
-  transition: opacity 7000ms ease;
+  transition: opacity 5000ms ease;
 }
 
 .bw-scroll-hero.is-animating .bw-scroll-hero-bg-original {
@@ -386,7 +386,8 @@ cover-img: "/assets/img/TESTsupp1.gif"
   transform: scale(1);
 
   transition:
-    opacity 200ms cubic-bezier(0.45, 0, 0.15, 1),
+    /* opacity 200ms cubic-bezier(0.4, 0, 0.2, 1), */
+    opacity 200ms linear
     transform 0ms cubic-bezier(0.22, 1, 0.36, 1);
 
   will-change: opacity, transform;
