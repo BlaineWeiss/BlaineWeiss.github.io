@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
     Must match your CSS opacity transition duration:
     transition: opacity 1000ms linear;
   */
-  const fadeDuration = 500;
+  const fadeDuration = 250;
 
   /*
     Time between the start of one frame transition and the next.
     This MUST be longer than fadeDuration.
   */
-  const frameDuration = 1000;
+  const frameDuration = 500;
 
   /*
     Animation starts when the user has scrolled this far into
