@@ -378,16 +378,28 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 /* Gallery panel */
 .bw-scroll-gallery {
-  width: min(440px, 42vw);
+  width: min(460px, 42vw);
   min-height: 330px;
 
   align-self: flex-end;
+
+  /*
+    This makes it appear later in the scroll sequence.
+    Increase this to delay the gallery.
+    Decrease this to make it appear sooner.
+  */
   margin-top: 0;
-  margin-bottom: 55vh;
+  margin-bottom: 90vh;
 
   display: block;
-  position: relative;
   overflow: hidden;
+
+  /*
+    This makes the gallery stop and stay still
+    once it reaches this point in the viewport.
+  */
+  position: sticky;
+  top: 16vh;
 
   border-radius: 24px;
   border: 1px solid rgba(255,255,255,0.26);
@@ -398,7 +410,13 @@ cover-img: "/assets/img/TESTsupp1.gif"
   text-decoration: none;
 
   opacity: 0;
-  transform: translate(90px, -90px) scale(0.94);
+
+  /*
+    Starts off to the right.
+    JavaScript adds .is-visible, which brings it into place.
+  */
+  transform: translateX(160px) scale(0.96);
+
   transition:
     opacity 0.75s ease,
     transform 0.75s cubic-bezier(.2,.8,.2,1),
@@ -407,13 +425,12 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 .bw-scroll-gallery.is-visible {
   opacity: 1;
-  transform: translate(0, 0) scale(1);
+  transform: translateX(0) scale(1);
 }
 
 .bw-scroll-gallery:hover {
   text-decoration: none;
   box-shadow: 0 28px 75px rgba(0,0,0,0.48);
-  transform: translate(0, -4px) scale(1.01);
 }
 
 .bw-gallery-image-wrap {
