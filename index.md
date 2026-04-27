@@ -585,7 +585,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 
 <section class="bw-scroll-hero">
-  <div class="bw-scroll-hero-bg">
+  <div class="bw-scroll-hero-bg"></div>
 
   <div class="bw-scroll-hero-content-wrap">
     <div class="bw-scroll-hero-content">
