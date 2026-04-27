@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let intervalId = null;
   let hasStarted = false;
 
-  const frameDuration =  100;
+  const frameDuration =  101;
 
  function setActiveFrame(nextIndex) {
   if (nextIndex === activeIndex) return;
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nextFrame.classList.add("is-current");
 
     activeIndex = nextIndex;
-  }, 50);
+  }, 100);
 }
 
   function startAnimation() {
