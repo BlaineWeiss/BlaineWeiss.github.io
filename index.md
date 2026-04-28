@@ -340,6 +340,21 @@ cover-img: "/assets/img/TESTsupp1.gif"
 }
 
 .bw-scroll-hero-bg-original {
+  
+  <video
+    class="bw-scroll-hero-bg-animation"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="/assets/img/stone-lava-anim/frame-00.png"
+  >
+    <source src="/assets/video/STONELAVAflowvideo.mp4" type="video/mp4">
+  </video>
+  }
+  
+/*
   opacity: 1;
 
   background-image:
@@ -357,7 +372,8 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
   transition: opacity 1000ms ease;
 }
-
+*/
+  
 .bw-scroll-hero-bg-animation {
   opacity: 0;
   transition: opacity 5000ms ease;
@@ -575,7 +591,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
   <div class="bw-scroll-hero-sticky">
 
     <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div>
-<!--
+
     <div class="bw-scroll-hero-bg-animation" aria-hidden="true">
       <img class="bw-anim-frame is-current" src="/assets/img/stone-lava-anim/frame-00.png" alt="">
       <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-01.png" alt="">
@@ -586,18 +602,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
       <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-06.png" alt="">
       <img class="bw-anim-frame" src="/assets/img/stone-lava-anim/frame-07.png" alt="">
     </div>
--->
-<video
-    class="bw-scroll-hero-bg-animation"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    poster="/assets/img/stone-lava-anim/frame-00.png"
-  >
-    <source src="/assets/video/STONELAVAflowvideo.mp4" type="video/mp4">
-  </video>
+
 
     <div class="bw-scroll-hero-content-wrap">
       <div class="bw-scroll-hero-text">
