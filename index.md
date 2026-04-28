@@ -582,7 +582,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 <section class="bw-scroll-hero">
   <div class="bw-scroll-hero-sticky">
 
-    <div class="bw-scroll-hero-bg-original" aria-hidden="true">
+  <div class="bw-scroll-hero-bg-original" aria-hidden="true">
   <video
     class="bw-scroll-hero-bg-video"
     autoplay
@@ -595,7 +595,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     <source src="/assets/video/STONELAVAflowvideo.mp4" type="video/mp4">
   </video>
 </div>
-    <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div>
+    <!-- <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div> -->
 
     <div class="bw-scroll-hero-bg-animation" aria-hidden="true">
       <img class="bw-anim-frame is-current" src="/assets/img/stone-lava-anim/frame-00.png" alt="">
