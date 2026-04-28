@@ -349,8 +349,8 @@ cover-img: "/assets/img/TESTsupp1.gif"
       rgba(15, 23, 42, 0.55) 0%,
       rgba(15, 23, 42, 0.35) 45%,
       rgba(15, 23, 42, 0.12) 100%
-    ),
-    url("/assets/img/LAVAconceptart.png");
+    ); /* replace semicolon with , to reenable static img*/
+    /* url("/assets/img/LAVAconceptart.png"); */
 
   background-size: cover;
   background-position: center;
@@ -589,7 +589,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     <source src="/assets/video/STONELAVAflowvideo.mp4" type="video/mp4">
   </video>
 </div>
-   <!-- <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div> -->
+    <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div>
 
     <div class="bw-scroll-hero-bg-animation" aria-hidden="true">
       <img class="bw-anim-frame is-current" src="/assets/img/stone-lava-anim/frame-00.png" alt="">
