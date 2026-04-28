@@ -358,7 +358,17 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
   transition: opacity 1000ms ease;
 }
-
+.bw-scroll-hero-bg-original::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+      90deg,
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(15, 23, 42, 0.35) 45%,
+      rgba(15, 23, 42, 0.12) 100%);
+}
   
 .bw-scroll-hero-bg-animation {
   opacity: 0;
