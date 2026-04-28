@@ -339,22 +339,8 @@ cover-img: "/assets/img/TESTsupp1.gif"
   background: #020617;
 }
 
+/* Below is for a static hero to receive a transition to*/
 .bw-scroll-hero-bg-original {
-  
-  <video
-    class="bw-scroll-hero-bg-animation"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    poster="/assets/img/stone-lava-anim/frame-00.png"
-  >
-    <source src="/assets/video/STONELAVAflowvideo.mp4" type="video/mp4">
-  </video>
-  }
-  
-/*
   opacity: 1;
 
   background-image:
@@ -372,7 +358,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
   transition: opacity 1000ms ease;
 }
-*/
+
   
 .bw-scroll-hero-bg-animation {
   opacity: 0;
@@ -590,7 +576,20 @@ cover-img: "/assets/img/TESTsupp1.gif"
 <section class="bw-scroll-hero">
   <div class="bw-scroll-hero-sticky">
 
-    <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div>
+    <div class="bw-scroll-hero-bg-original" aria-hidden="true">
+  <video
+    class="bw-scroll-hero-bg-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="/assets/img/LAVAconceptart.png"
+  >
+    <source src="/assets/video/STONELAVAflowvideo.mp4" type="video/mp4">
+  </video>
+</div>
+   <!-- <div class="bw-scroll-hero-bg-original" aria-hidden="true"></div> -->
 
     <div class="bw-scroll-hero-bg-animation" aria-hidden="true">
       <img class="bw-anim-frame is-current" src="/assets/img/stone-lava-anim/frame-00.png" alt="">
