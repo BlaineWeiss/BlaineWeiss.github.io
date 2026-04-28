@@ -438,7 +438,13 @@ cover-img: "/assets/img/TESTsupp1.gif"
   color: rgba(255,255,255,0.76) !important;
   font-size: 1rem !important;
 }
-
+.bw-scroll-hero-bg-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
   
   
 
