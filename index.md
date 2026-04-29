@@ -748,7 +748,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     </div>
   </div>
 </div>
-
+<!--
 <div class="bw-section">
   <h2>Publications & Scientific Output</h2>
 
@@ -841,3 +841,4 @@ cover-img: "/assets/img/TESTsupp1.gif"
     <a href="mailto:YOUR_EMAIL_HERE">Contact</a>
   </p>
 </div>
+-->
