@@ -517,7 +517,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
 <div class="bw-metrics">
   <div class="bw-metric">
-    <strong>9</strong>
+    <strong>10</strong>
     Publications
   </div>
   <div class="bw-metric">
@@ -525,7 +525,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
     Posters & presentations
   </div>
   <div class="bw-metric">
-    <strong>2017</strong>
+    <strong>Since 2017</strong>
     Sanders-Brown affiliation
   </div>
   <div class="bw-metric">
