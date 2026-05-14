@@ -572,7 +572,7 @@ cover-img: "/assets/img/TESTsupp1.gif"
 
     <div class="bw-full-hero-actions">
       <a class="bw-hero-button bw-hero-button-primary"
-         href="/assets/downloads/STONE-LAVA Installer.exe"
+         href="/assets/downloads/STONE-LAVA_Installer.exe"
          download>
         Get STONE-LAVA
       </a>
